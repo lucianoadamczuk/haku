@@ -1,7 +1,7 @@
 interface Props {
 	tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
 	text: string;
-	size?: '2xl' | 'x2' | 'lg';
+	size?: '2xl' | 'xl' | 'lg';
 	color?: 'light' | 'secondary';
 	fontFamily?: 'japanese';
 }

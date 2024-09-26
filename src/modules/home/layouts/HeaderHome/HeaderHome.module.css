@@ -1,18 +1,24 @@
-.HeaderHome {
+.headerHome {
+	/*Display stuff*/
+	display: grid;
+	grid-template-rows: 50% 50%;
+	/*Box model stuff*/
 	height: 100vh;
 	padding: var(--space-xl) var(--space-container) var(--space-sm)
 		var(--space-container);
-	display: grid;
-	grid-template-rows: 50% 50%;
+	/*Miscellaneous*/
 	gap: var(--space-sm);
 }
 
 .image {
+	/*Box model stuff*/
 	height: 100%;
 	background-color: green;
 }
 
 .textContainer {
-	place-self: center;
+	/*Typography stuff*/
 	text-align: center;
+	/*Miscellaneous*/
+	place-self: center;
 }

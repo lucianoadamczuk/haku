@@ -1,0 +1,128 @@
+{
+	"services": [
+		{
+			"title": "Sakura Plan",
+			"japaneseTitle": "桜プラン",
+			"text": "Inspired by the cherry blossom, a symbol of new beginnings. The perfect initial plan that provides the essentials for growth.",
+			"items": [
+				{
+					"title": "Platforms",
+					"text": "Instagram, Facebook, and TikTok"
+				},
+				{
+					"title": "Content",
+					"text": "Focus on hooks that capture attention in the first 3 seconds. Use of viral content that encourages interactions."
+				},
+				{
+					"title": "Acquisition Strategy",
+					"text": "Setup of a low-budget campaign on Facebook/Instagram Ads to attract interested traffic to the profile."
+				},
+				{
+					"title": "Basic Ads",
+					"text": "Low-budget campaign on Facebook/Instagram Ads."
+				},
+				{
+					"title": "Monthly Data Analysis",
+					"text": "Simple report of follower growth, engagement (likes, comments, shares), and basic audience analysis."
+				}
+			],
+			"alt": "Cherry blossom."
+		},
+		{
+			"title": "Fuji Plan",
+			"japaneseTitle": "富士プラン",
+			"text": "Named after Mount Fuji, a symbol of strength. A service that provides greater solidity and marketing structure.",
+			"items": [
+				{
+					"title": "Covered Platforms",
+					"text": "Instagram, Facebook, TikTok, LinkedIn"
+				},
+				{
+					"title": "Content",
+					"text": "20 monthly posts (5 per week), including short videos in reel/TikTok style and graphics to increase reach."
+				},
+				{
+					"title": "Advanced Ads",
+					"text": "Retargeting campaigns to maximize conversions from those who interact with organic posts."
+				},
+				{
+					"title": "Lead Generation",
+					"text": "Use of integrated forms in ads to capture information from potential clients."
+				},
+				{
+					"title": "Profile Optimization",
+					"text": "Review and optimization of bios and descriptions to improve conversion from visitors to followers/clients."
+				},
+				{
+					"title": "More Detailed Monthly Analysis",
+					"text": "Reports with key metrics (CPC, CTR, leads generated) and improvement suggestions."
+				}
+			],
+			"alt": "Mount Fuji."
+		},
+		{
+			"title": "Bushido Plan",
+			"japaneseTitle": "武士道プラン",
+			"text": "Inspired by military leaders, represents power and strategic control. A plan for companies seeking strong leadership in marketing.",
+			"items": [
+				{
+					"title": "Covered Platforms",
+					"text": "Instagram, Facebook, TikTok, LinkedIn, Google Ads."
+				},
+				{
+					"title": "Content",
+					"text": "25 monthly posts, with a mix of educational content, social proof (testimonials, success stories), and high-impact promotions."
+				},
+				{
+					"title": "Multichannel Ads",
+					"text": "Setup and optimization of remarketing campaigns and ads on Google and social media focused on conversion and closing sales."
+				},
+				{
+					"title": "Sales Funnel",
+					"text": "Creation and optimization of automated sales funnels, from lead generation to final sale, applying principles of scarcity, urgency, and social proof."
+				},
+				{
+					"title": "Email Marketing",
+					"text": "Setup of automated sequences to nurture leads, increasing the conversion of those who have not yet made a decision."
+				},
+				{
+					"title": "Constant Optimization",
+					"text": "Weekly campaign analysis and continuous adjustment to maximize ROI."
+				}
+			],
+			"alt": "A samurai."
+		},
+		{
+			"title": "Tenka Plan",
+			"japaneseTitle": "天下プラン",
+			"text": "Tenka means 'under the sky', used to refer to absolute control. This plan represents the utmost dominance in marketing, with all top-tier services.",
+			"items": [
+				{
+					"title": "Covered Platforms",
+					"text": "All previous ones, plus YouTube and podcasting to generate authority in the industry."
+				},
+				{
+					"title": "Content",
+					"text": "Collaboration with micro-influencers and brand ambassadors to amplify reach."
+				},
+				{
+					"title": "Influencer Marketing",
+					"text": "Collaboration with micro-influencers and brand ambassadors to amplify reach."
+				},
+				{
+					"title": "Aggressive Ad Campaigns",
+					"text": "Significant budget for campaigns across multiple platforms, with constant A/B testing to ensure that the most effective creatives are always active."
+				},
+				{
+					"title": "Sales Funnel Optimization",
+					"text": "Sales funnels with intensive tracking and multiple touchpoints, from ads to email marketing, webinars, and remarketing."
+				},
+				{
+					"title": "Advanced Data Analysis",
+					"text": "Weekly reports on all metrics, focusing on lifetime value (LTV), customer acquisition cost (CAC), and strategies to improve retention."
+				}
+			],
+			"alt": "A dragon."
+		}
+	]
+}

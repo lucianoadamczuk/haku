@@ -6,8 +6,8 @@
 			"pathname": "who-we-are"
 		},
 		"services": {
-			"name": "Services",
-			"pathname": "services"
+			"name": "What we offer",
+			"pathname": "what-we-offer"
 		},
 		"contact": { "name": "Contact", "pathname": "contact" }
 	}

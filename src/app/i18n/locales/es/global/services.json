@@ -1,0 +1,128 @@
+{
+	"services": [
+		{
+			"title": "Plan Sakura",
+			"japaneseTitle": "桜プラン",
+			"text": "Inspirado en la flor de cerezo, símbolo de nuevos comienzos. El plan inicial perfecto que brinda lo esencial para crecer.",
+			"items": [
+				{
+					"title": "Plataformas",
+					"text": "Instagram, Facebook y TikTok"
+				},
+				{
+					"title": "Contenido",
+					"text": "Enfoque en hooks que capten la atención en los primeros 3 segundos. Uso de contenido viral que motive interacciones."
+				},
+				{
+					"title": "Estrategia de captación",
+					"text": "Configuración de una campaña de bajo presupuesto en Facebook/Instagram Ads para atraer tráfico de interés hacia el perfil."
+				},
+				{
+					"title": "Anuncios básicos",
+					"text": "Campaña de bajo presupuesto en Facebook/Instagram Ads."
+				},
+				{
+					"title": "Análisis de datos mensuales",
+					"text": "Informe simple del crecimiento en seguidores, engagement (likes, comentarios, shares) y análisis básico de la audiencia."
+				}
+			],
+			"alt": "Flor de cerezo."
+		},
+		{
+			"title": "Plan Fuji",
+			"japaneseTitle": "富士プラン",
+			"text": "Nombrado en honor al Monte Fuji, símbolo de fortaleza. Un servicio que proporciona mayor solidez y estructura de marketing.",
+			"items": [
+				{
+					"title": "Plataformas cubiertas",
+					"text": "Instagram, Facebook, TikTok, Linkedin"
+				},
+				{
+					"title": "Contenido",
+					"text": "20 publicaciones mensuales (5 por semana), incluyendo videos cortos estilo reels/TikTok y gráficos para aumentar el alcance."
+				},
+				{
+					"title": "Anuncios más avanzados",
+					"text": "Campañas de retargeting para maximizar las conversiones de aquellos que interactúan con las publicaciones orgánicas."
+				},
+				{
+					"title": "Generación de leads",
+					"text": "Uso de formularios integrados en anuncios para captar información de potenciales clientes."
+				},
+				{
+					"title": "Optimización de perfil",
+					"text": "Revisión y optimización de las bios y descripciones para mejorar la conversión de visitantes a seguidores/clientes."
+				},
+				{
+					"title": "Análisis mensual más detallado",
+					"text": "Reportes con métricas clave (CPC, CTR, leads generados) y sugerencias de mejora."
+				}
+			],
+			"alt": "El Monte Fuji."
+		},
+		{
+			"title": "Plan Bushido",
+			"japaneseTitle": "武士道プラン",
+			"text": "Inspirado en líderes militares, representa poder y control estratégico. Un plan para empresas que buscan un liderazgo fuerte en marketing.",
+			"items": [
+				{
+					"title": "Plataformas cubiertas",
+					"text": "Instagram, Facebook, TikTok, LinkedIn, Google Ads."
+				},
+				{
+					"title": "Contenido",
+					"text": "25 publicaciones mensuales, con una mezcla de contenido educativo, social proof (testimonios, casos de éxito) y promociones de alto impacto."
+				},
+				{
+					"title": "Anuncios multicanal",
+					"text": "Configuración y optimización de campañas de remarketing y anuncios en Google y redes sociales con enfoque en conversión y cierre de ventas."
+				},
+				{
+					"title": "Funnel de ventas",
+					"text": "Creación y optimización de embudos de ventas automáticos, desde la captación de leads hasta la venta final, aplicando principios de escasez, urgencia y prueba social."
+				},
+				{
+					"title": "Email Marketing",
+					"text": "Configuración de secuencias automatizadas para nutrir leads, aumentando la conversión de aquellos que aún no han tomado una decisión."
+				},
+				{
+					"title": "Optimización constante",
+					"text": "Análisis semanal de campañas y ajuste continuo para maximizar ROI."
+				}
+			],
+			"alt": "Un samurai."
+		},
+		{
+			"title": "Plan Tenka",
+			"japaneseTitle": "天下プラン",
+			"text": "Tenka significa 'bajo el cielo', usado para referirse al control absoluto. Este plan representa el máximo dominio en el marketing, con todos los servicios de primer nivel.",
+			"items": [
+				{
+					"title": "Plataformas cubiertas",
+					"text": "Todas las anteriores, además de YouTube y podcasting para generar autoridad en la industria."
+				},
+				{
+					"title": "Contenido",
+					"text": "Colaboración con microinfluencers y embajadores de marca para amplificar el alcance."
+				},
+				{
+					"title": "Marketing de influencia",
+					"text": "Colaboración con microinfluencers y embajadores de marca para amplificar el alcance."
+				},
+				{
+					"title": "Campañas agresivas de anuncios",
+					"text": "Presupuesto significativo para campañas en múltiples plataformas, con A/B testing constante para asegurar que las creatividades más efectivas estén siempre activas."
+				},
+				{
+					"title": "Optimización de embudo de ventas",
+					"text": "Funnels de venta con seguimiento intensivo y múltiples puntos de contacto, desde ads hasta email marketing, webinars y remarketing."
+				},
+				{
+					"title": "Análisis de datos avanzado",
+					"text": "Reportes semanales de todas las métricas, con enfoque en lifetime value (LTV), customer acquisition cost (CAC) y estrategias para mejorar la retención."
+				}
+			],
+			"alt": "Un dragón."
+		}
+	]
+}

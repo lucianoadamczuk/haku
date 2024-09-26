@@ -4,6 +4,7 @@
 		"configuration",
 		"theme",
 		"components",
-		"layouts"
+		"layouts",
+		"general"
 	]
 }

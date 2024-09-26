@@ -4,4 +4,7 @@ export type Icons =
 	| 'facebook'
 	| 'x'
 	| 'menu'
-	| 'close';
+	| 'close'
+	| 'people'
+	| 'target'
+	| 'rocket';

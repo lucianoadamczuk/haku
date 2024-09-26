@@ -3,6 +3,11 @@
 	width: 35px;
 }
 
+.full {
+	width: 100%;
+	height: 100%;
+}
+
 .light {
 	color: var(--color-light);
 	fill: var(--color-light);

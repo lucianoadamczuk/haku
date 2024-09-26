@@ -1,0 +1,8 @@
+.whatWeOffer {
+	padding: var(--space-xl) var(--space-container);
+}
+
+.cardsContainer {
+	display: grid;
+	gap: var(--space-lg);
+}

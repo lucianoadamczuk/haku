@@ -1,0 +1,95 @@
+.slideWhoWeAre {
+	/*Display stuff*/
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 1fr 200px;
+	/*Box model stuff*/
+	width: 100%;
+	min-height: 100vh;
+	padding: var(--space-xl) var(--space-container);
+	background-color: var(--color-primary);
+	/*Miscellaneous*/
+	gap: var(--space-md);
+	place-items: center;
+}
+
+.icon {
+	/*Box model stuff*/
+	width: 100% !important;
+	height: 100% !important;
+	max-width: 200px;
+	place-content: center;
+}
+
+/* ------------------------------- animation 1 ------------------------------ */
+.animation-1:hover {
+	/*Manipulations stuff*/
+	animation: animation-1 var(--transition-slow) linear infinite;
+}
+
+@keyframes animation-1 {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(5deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/* ------------------------------- animation 2 ------------------------------ */
+.animation-2:hover {
+	/*Manipulations stuff*/
+	animation: animation-2 var(--transition-slow) linear infinite;
+}
+
+@keyframes animation-2 {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.1);
+	}
+	50% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* ------------------------------- animation 3 ------------------------------ */
+.animation-3:hover {
+	/*Manipulations stuff*/
+	animation: animation-3 var(--transition-slow) linear infinite;
+}
+
+@keyframes animation-3 {
+	0% {
+		transform: translateY(0px);
+	}
+	25% {
+		transform: translateY(10px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	75% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}

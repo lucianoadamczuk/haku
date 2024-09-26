@@ -1,0 +1,42 @@
+.cardService {
+	/*Display stuff*/
+	display: grid;
+	/*Miscellaneous*/
+	gap: var(--space-sm);
+	place-items: center;
+}
+
+.contentContainer {
+	/*Display stuff*/
+	display: grid;
+	/*Box model stuff*/
+	min-height: 500px;
+	padding: var(--space-sm);
+	border-radius: var(--rounded-md);
+	/*Miscellaneous*/
+	place-content: end;
+	box-shadow: 1px 2px 2px 2px var(--color-primary);
+}
+
+.japaneseTitleContainer {
+	/*Display stuff*/
+	display: flex;
+	flex-direction: column;
+	/*Positioning stuff*/
+	position: absolute;
+	right: var(--space-md);
+	top: var(--space-md);
+}
+
+.image {
+	/*Positioning stuff*/
+	position: absolute;
+	/*Box model stuff*/
+	width: 80%;
+	height: 80%;
+	/*Manipulations stuff*/
+	opacity: var(--opacity-low);
+	/*Miscellaneous*/
+	inset: 0;
+	object-fit: cover;
+}
