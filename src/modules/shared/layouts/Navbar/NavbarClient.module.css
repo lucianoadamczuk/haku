@@ -1,7 +1,36 @@
 .navbarClient {
+	/*Display stuff*/
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/*Positioning stuff*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*Box model stuff*/
 	width: 100%;
 	padding: var(--space-sm) var(--space-container);
-	background-color: red;
+	background-color: var(--color-primary);
+}
+
+.linksContainer {
+	/*Display stuff*/
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/*Positioning stuff*/
+	position: absolute;
+	top: 65px;
+	/*Box model stuff*/
+	width: 100%;
+	height: calc(100vh - 65px);
+	padding: var(--space-lg) var(--space-container);
+	background-color: var(--color-light-transparent);
+	/*Typography stuff*/
+	text-align: center;
+	/*Manipulations stuff*/
+	transition: all var(--transition-slow) allow-discrete;
+	/*Miscellaneous*/
+	gap: var(--space-md);
 }

@@ -38,7 +38,7 @@ export default function RootLayout({ children, params }: Props) {
 	return (
 		<html lang={currentLanguage} dir={dir(currentLanguage)}>
 			<body>
-				<Navbar />
+				<Navbar language={currentLanguage} />
 				{children}
 			</body>
 		</html>

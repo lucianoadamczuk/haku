@@ -1,0 +1,23 @@
+.icon {
+	height: 35px;
+	width: 35px;
+}
+
+.light {
+	color: var(--color-light);
+	fill: var(--color-light);
+}
+
+.primary {
+	color: var(--color-primary);
+	fill: var(--color-primary);
+}
+
+.hover {
+	opacity: var(--opacity-normal);
+	transition: var(--transition-fast);
+}
+
+.hover:hover {
+	opacity: 1;
+}
