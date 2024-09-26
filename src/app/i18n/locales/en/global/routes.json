@@ -1,0 +1,14 @@
+{
+	"routes": {
+		"beginning": { "name": "Home", "pathname": "home" },
+		"about": {
+			"name": "Who We Are?",
+			"pathname": "who-we-are"
+		},
+		"services": {
+			"name": "Services",
+			"pathname": "services"
+		},
+		"contact": { "name": "Contact", "pathname": "contact" }
+	}
+}
