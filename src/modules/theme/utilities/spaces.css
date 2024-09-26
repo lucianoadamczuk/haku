@@ -1,7 +1,7 @@
 :root {
-	--space-SM: 5px;
-	--space-MD: 15px;
-	--space-LG: 25px;
-	--space-XL: 60px;
-	--space-container: 10%;
+	--space-sm: 15px;
+	--space-md: 25px;
+	--space-lg: 35px;
+	--space-xl: 60px;
+	--space-container: 5%;
 }

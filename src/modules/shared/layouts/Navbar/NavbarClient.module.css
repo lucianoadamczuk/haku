@@ -1,0 +1,7 @@
+.navbarClient {
+	width: 100%;
+	padding: var(--space-sm) var(--space-container);
+	background-color: red;
+	display: flex;
+	justify-content: space-between;
+}

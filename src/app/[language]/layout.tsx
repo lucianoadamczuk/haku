@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import { StaticParams } from '@/modules/types';
 import { redirect } from 'next/navigation';
 import '../../modules/theme/index.css';
+import { Navbar } from '@/modules/shared';
 
 /* ------------------------------ static params ----------------------------- */
 export async function generateStaticParams() {
@@ -36,7 +37,10 @@ export default function RootLayout({ children, params }: Props) {
 
 	return (
 		<html lang={currentLanguage} dir={dir(currentLanguage)}>
-			<body>{children}</body>
+			<body>
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	);
 }
