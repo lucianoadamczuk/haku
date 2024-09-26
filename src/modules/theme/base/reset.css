@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+	max-width: 100vw;
+	overflow-x: hidden;
+	background-color: var(--color-light);
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+}

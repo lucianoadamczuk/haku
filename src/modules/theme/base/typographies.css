@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Montserrat-Bold';
+	src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NotoSansJP-Medium';
+	src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lora-Medium';
+	src: url('/fonts/Lora-Medium.ttf') format('truetype');
+}
+
+:root {
+	--font-family-base: 'Lora-Medium';
+	--font-family-title: 'Montserrat-Bold';
+	--font-family-japanese: 'NotoSansJP-Medium';
+
+	--font-size-small: 1.2rem;
+	--font-size-base: 1.6rem;
+	--font-size-subtitle: clamp(2.6rem, 10vw, 3rem);
+	--font-size-title: clamp(3rem, 10vw, 6rem);
+	--font-size-supertitle: clamp(6rem, 10vw, 8rem);
+}

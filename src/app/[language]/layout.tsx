@@ -3,6 +3,7 @@ import { fallbackLng, languages } from '../i18n/configuration/settings';
 import { ReactNode } from 'react';
 import { StaticParams } from '@/modules/types';
 import { redirect } from 'next/navigation';
+import '../../modules/theme/index.css';
 
 /* ------------------------------ static params ----------------------------- */
 export async function generateStaticParams() {
