@@ -3,6 +3,7 @@
 		"dependencies",
 		"configuration",
 		"theme",
-		"components"
+		"components",
+		"layouts"
 	]
 }

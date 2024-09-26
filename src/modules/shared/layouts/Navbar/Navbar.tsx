@@ -7,8 +7,11 @@ interface Props {
 
 export default async function Navbar({ language }: Props) {
 	const { t } = await useTranslation(language, 'global/routes');
-	const object = t('routes', { ns: 'global/routes', returnObjects: true });
+	const routesObject = t('routes', {
+		ns: 'global/routes',
+		returnObjects: true,
+	});
+	const routes = Object.values(routesObject);
 
-	const routes = Object.values(object);
 	return <NavbarClient routes={routes} />;
 }

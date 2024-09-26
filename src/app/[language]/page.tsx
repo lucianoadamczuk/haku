@@ -1,3 +1,9 @@
-export default async function Home() {
-	return <div></div>;
+import { HeaderHome } from '@/modules/home';
+
+export default async function PageHome() {
+	return (
+		<>
+			<HeaderHome />
+		</>
+	);
 }

@@ -4,13 +4,31 @@
 	align-items: center;
 	justify-content: space-between;
 	/*Positioning stuff*/
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
+	z-index: 10;
 	/*Box model stuff*/
 	width: 100%;
 	padding: var(--space-sm) var(--space-container);
 	background-color: var(--color-primary);
+}
+
+.select {
+	/*Box model stuff*/
+	border: 0px;
+	border-radius: var(--rounded-md);
+	outline: none;
+	background-color: var(--color-primary);
+	/*Typography stuff*/
+	color: var(--color-light);
+	/*Miscellaneous*/
+	cursor: pointer;
+
+	& > option {
+		background-color: var(--color-primary);
+		border-radius: 2px;
+	}
 }
 
 .linksContainer {

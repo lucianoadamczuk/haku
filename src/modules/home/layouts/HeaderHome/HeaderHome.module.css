@@ -1,0 +1,18 @@
+.HeaderHome {
+	height: 100vh;
+	padding: var(--space-xl) var(--space-container) var(--space-sm)
+		var(--space-container);
+	display: grid;
+	grid-template-rows: 50% 50%;
+	gap: var(--space-sm);
+}
+
+.image {
+	height: 100%;
+	background-color: green;
+}
+
+.textContainer {
+	place-self: center;
+	text-align: center;
+}
