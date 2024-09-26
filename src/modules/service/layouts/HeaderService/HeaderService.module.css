@@ -1,0 +1,18 @@
+.headerService {
+	display: grid;
+	grid-template-rows: auto minmax(auto, 350px);
+	padding: var(--space-xl) var(--space-container);
+	place-items: center;
+	place-content: center;
+	place-self: center;
+	align-items: center;
+	gap: var(--space-lg);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+
+	object-fit: contain;
+	position: relative;
+}

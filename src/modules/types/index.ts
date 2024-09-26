@@ -1,1 +1,1 @@
-export * from './StaticParams';
+export * from './AppParams';

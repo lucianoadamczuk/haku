@@ -10,12 +10,29 @@
 	/*Display stuff*/
 	display: grid;
 	/*Box model stuff*/
+	height: fit-content;
 	min-height: 500px;
 	padding: var(--space-sm);
 	border-radius: var(--rounded-md);
 	/*Miscellaneous*/
 	place-content: end;
 	box-shadow: 1px 2px 2px 2px var(--color-primary);
+}
+
+.circle {
+	/*Positioning stuff*/
+	position: absolute;
+	left: 50%;
+	top: var(--space-md);
+	/*Box model stuff*/
+	width: 15px;
+	border-radius: 50%;
+	background-color: var(--color-light);
+	/*Manipulations stuff*/
+	transform: translate(-50%);
+	/*Miscellaneous*/
+	aspect-ratio: 1/1;
+	box-shadow: inset 2px 2px 1px var(--color-primary);
 }
 
 .japaneseTitleContainer {
@@ -35,7 +52,7 @@
 	width: 80%;
 	height: 80%;
 	/*Manipulations stuff*/
-	opacity: var(--opacity-low);
+	opacity: var(--opacity-normal);
 	/*Miscellaneous*/
 	inset: 0;
 	object-fit: cover;

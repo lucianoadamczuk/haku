@@ -44,12 +44,19 @@ export default function CardService({
 	return (
 		<a href={href} className={styles.cardService}>
 			<div className={styles.contentContainer}>
+				<div className={styles.circle}></div>
 				<div className={styles.japaneseTitleContainer}>
 					{splitJapaneseTitle(japaneseTitle)}
 				</div>
 				<Title tag='h4' size='lg' text={title} />
 				<Text tag='p' size='sm' text={text} />
-				<Image src={src} alt={alt} fill className={styles.image} />
+				<Image
+					src={src}
+					alt={alt}
+					fill
+					loading='lazy'
+					className={styles.image}
+				/>
 			</div>
 			<Text tag='span' text={button} />
 		</a>

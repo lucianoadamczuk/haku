@@ -1,6 +1,7 @@
 {
 	"services": [
 		{
+			"slug": "plan-sakura",
 			"title": "Plan Sakura",
 			"japaneseTitle": "桜プラン",
 			"text": "Inspirado en la flor de cerezo, símbolo de nuevos comienzos. El plan inicial perfecto que brinda lo esencial para crecer.",
@@ -29,6 +30,7 @@
 			"alt": "Flor de cerezo."
 		},
 		{
+			"slug": "plan-fuji",
 			"title": "Plan Fuji",
 			"japaneseTitle": "富士プラン",
 			"text": "Nombrado en honor al Monte Fuji, símbolo de fortaleza. Un servicio que proporciona mayor solidez y estructura de marketing.",
@@ -61,6 +63,7 @@
 			"alt": "El Monte Fuji."
 		},
 		{
+			"slug": "plan-bushido",
 			"title": "Plan Bushido",
 			"japaneseTitle": "武士道プラン",
 			"text": "Inspirado en líderes militares, representa poder y control estratégico. Un plan para empresas que buscan un liderazgo fuerte en marketing.",
@@ -93,6 +96,7 @@
 			"alt": "Un samurai."
 		},
 		{
+			"slug": "plan-tenka",
 			"title": "Plan Tenka",
 			"japaneseTitle": "天下プラン",
 			"text": "Tenka significa 'bajo el cielo', usado para referirse al control absoluto. Este plan representa el máximo dominio en el marketing, con todos los servicios de primer nivel.",

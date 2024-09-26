@@ -8,23 +8,17 @@ interface Props {
 	language: string;
 }
 export default async function WhatWeOffer({ language }: Props) {
-	const images = [
-		'/images/shared/service-1.svg',
-		'/images/shared/service-2.svg',
-		'/images/shared/service-3.svg',
-		'/images/shared/service-4.svg',
-	];
-
 	const { t } = await useTranslation(language, [
 		'global/services',
 		'global/buttons',
+		'global/routes',
 	]);
 
 	const services = t('services', {
 		ns: 'global/services',
 		returnObjects: true,
 	});
-
+	const serviceRoute = t('subRoutes.service', { ns: 'global/routes' });
 	const button = t('seeMore', { ns: 'global/buttons' });
 
 	return (
@@ -33,12 +27,12 @@ export default async function WhatWeOffer({ language }: Props) {
 
 			<div className={styles.cardsContainer}>
 				{services.map((s, index) => {
-					const sanitizeTitle = sanitizeString(s.title);
-					const key = `service_${sanitizeString}`;
-					const href = `${language}/${sanitizeTitle}`;
+					const key = `service_${s.slug}`;
+					const href = `${language}/${serviceRoute}/${s.slug}`;
 					const japaneseTitle = s.japaneseTitle;
 					const title = s.title;
 					const text = s.text;
+					const src = `/images/shared/service-${index + 1}.svg`;
 					const alt = s.alt;
 
 					return (
@@ -48,7 +42,7 @@ export default async function WhatWeOffer({ language }: Props) {
 							japaneseTitle={japaneseTitle}
 							title={title}
 							text={text}
-							src={images[index]}
+							src={src}
 							alt={alt}
 							button={button}
 						/>

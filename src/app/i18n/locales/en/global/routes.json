@@ -10,5 +10,8 @@
 			"pathname": "what-we-offer"
 		},
 		"contact": { "name": "Contact", "pathname": "contact" }
+	},
+	"subRoutes": {
+		"service": "service"
 	}
 }

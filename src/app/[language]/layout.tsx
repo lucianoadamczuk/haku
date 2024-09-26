@@ -1,10 +1,11 @@
 import { dir } from 'i18next';
 import { fallbackLng, languages } from '../i18n/configuration/settings';
 import { ReactNode } from 'react';
-import { StaticParams } from '@/modules/types';
+
 import { redirect } from 'next/navigation';
 import '../../modules/theme/index.css';
 import { Navbar } from '@/modules/shared';
+import { AppParams } from '@/modules/types';
 
 /* ------------------------------ static params ----------------------------- */
 export async function generateStaticParams() {
@@ -12,7 +13,7 @@ export async function generateStaticParams() {
 }
 
 /* -------------------------------- metadata -------------------------------- */
-export async function generateMetadata({ params }: { params: StaticParams }) {
+export async function generateMetadata({ params }: { params: AppParams }) {
 	const t = await import(
 		`../i18n/locales/${params.language}/global/metadata.json`
 	);
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: StaticParams }) {
 
 interface Props {
 	children: ReactNode;
-	params: StaticParams;
+	params: AppParams;
 }
 
 export default function RootLayout({ children, params }: Props) {

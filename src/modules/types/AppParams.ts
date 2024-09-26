@@ -1,5 +1,7 @@
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 
-export interface StaticParams extends Params {
+export interface AppParams extends Params {
 	language: string;
+	service: string;
+	serviceName: string;
 }
