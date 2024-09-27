@@ -1,7 +1,7 @@
 import { HeaderHome, WhatWeOffer, WhoWeAre } from '@/modules/home';
-import { StaticParams } from '@/modules/types';
+import { AppParams } from '@/modules/types';
 
-export default async function PageHome({ params }: { params: StaticParams }) {
+export default async function PageHome({ params }: { params: AppParams }) {
 	const language = params.language;
 	return (
 		<>

@@ -1,34 +1,17 @@
 import { Text, Title } from '@/modules/shared';
-import styles from './HeaderService.module.css';
+import { Service } from '@/modules/types';
 import Image from 'next/image';
-import { useTranslation } from '@/app/i18n/configuration/server';
-import { redirect } from 'next/navigation';
+import styles from './HeaderService.module.css';
 
 interface Props {
-	language: string;
-	serviceName: string;
+	service: Service;
 }
-export default async function HeaderService({ language, serviceName }: Props) {
-	const { t } = await useTranslation(language, 'global/services');
-	const services = t('services', {
-		ns: 'global/services',
-		returnObjects: true,
-	});
-
-	const serviceFound = services.find((service) => service.slug === serviceName);
-
-	if (!serviceFound) {
-		redirect(`/${language}`);
-	}
-
-	const serviceIndex =
-		services.findIndex((service) => service.slug === serviceName) + 1;
-
-	const japaneseTitle = serviceFound.japaneseTitle;
-	const title = serviceFound.title;
-	const text = serviceFound.text;
-	const src = `/images/shared/service-${serviceIndex}.svg`;
-	const alt = serviceFound.alt;
+export default async function HeaderService({ service }: Props) {
+	const japaneseTitle = service.japaneseTitle;
+	const title = service.title;
+	const text = service.text;
+	const src = service.src;
+	const alt = service.alt;
 
 	return (
 		<header className={styles.headerService}>

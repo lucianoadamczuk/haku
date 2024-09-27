@@ -27,6 +27,7 @@
 					"text": "Informe simple del crecimiento en seguidores, engagement (likes, comentarios, shares) y análisis básico de la audiencia."
 				}
 			],
+			"src": "/images/shared/service-1.svg",
 			"alt": "Flor de cerezo."
 		},
 		{
@@ -60,6 +61,7 @@
 					"text": "Reportes con métricas clave (CPC, CTR, leads generados) y sugerencias de mejora."
 				}
 			],
+			"src": "/images/shared/service-2.svg",
 			"alt": "El Monte Fuji."
 		},
 		{
@@ -93,6 +95,7 @@
 					"text": "Análisis semanal de campañas y ajuste continuo para maximizar ROI."
 				}
 			],
+			"src": "/images/shared/service-3.svg",
 			"alt": "Un samurai."
 		},
 		{
@@ -126,6 +129,7 @@
 					"text": "Reportes semanales de todas las métricas, con enfoque en lifetime value (LTV), customer acquisition cost (CAC) y estrategias para mejorar la retención."
 				}
 			],
+			"src": "/images/shared/service-4.svg",
 			"alt": "Un dragón."
 		}
 	]

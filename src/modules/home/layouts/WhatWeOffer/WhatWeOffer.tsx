@@ -2,7 +2,6 @@ import { Title } from '@/modules/shared';
 import styles from './WhatWeOffer.module.css';
 import CardService from '../../components/CardService/CardService';
 import { useTranslation } from '@/app/i18n/configuration/server';
-import { sanitizeString } from '@/utilities';
 
 interface Props {
 	language: string;
@@ -18,7 +17,7 @@ export default async function WhatWeOffer({ language }: Props) {
 		ns: 'global/services',
 		returnObjects: true,
 	});
-	const serviceRoute = t('subRoutes.service', { ns: 'global/routes' });
+
 	const button = t('seeMore', { ns: 'global/buttons' });
 
 	return (
@@ -28,7 +27,7 @@ export default async function WhatWeOffer({ language }: Props) {
 			<div className={styles.cardsContainer}>
 				{services.map((s, index) => {
 					const key = `service_${s.slug}`;
-					const href = `${language}/${serviceRoute}/${s.slug}`;
+					const href = `${language}/service/${s.slug}`;
 					const japaneseTitle = s.japaneseTitle;
 					const title = s.title;
 					const text = s.text;

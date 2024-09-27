@@ -1,11 +1,9 @@
-import { dir } from 'i18next';
-import { fallbackLng, languages } from '../i18n/configuration/settings';
-import { ReactNode } from 'react';
-
-import { redirect } from 'next/navigation';
-import '../../modules/theme/index.css';
 import { Navbar } from '@/modules/shared';
 import { AppParams } from '@/modules/types';
+import { dir } from 'i18next';
+import { ReactNode } from 'react';
+import '../../modules/theme/index.css';
+import { languages } from '../i18n/configuration/settings';
 
 /* ------------------------------ static params ----------------------------- */
 export async function generateStaticParams() {
@@ -14,13 +12,17 @@ export async function generateStaticParams() {
 
 /* -------------------------------- metadata -------------------------------- */
 export async function generateMetadata({ params }: { params: AppParams }) {
-	const t = await import(
-		`../i18n/locales/${params.language}/global/metadata.json`
-	);
-	const title = t.title;
-	const description = t.description;
+	try {
+		const t = await import(
+			`../i18n/locales/${params.language}/global/metadata.json`
+		);
+		const title = t.title;
+		const description = t.description;
 
-	return { title, description };
+		return { title, description };
+	} catch (error) {
+		console.log(error);
+	}
 }
 
 interface Props {
@@ -29,17 +31,12 @@ interface Props {
 }
 
 export default function RootLayout({ children, params }: Props) {
-	const { language: currentLanguage } = params;
-
-	/* ------------------------ handle unmatched language ----------------------- */
-	if (!languages.includes(currentLanguage)) {
-		return redirect(`/${fallbackLng}`);
-	}
+	const { language } = params;
 
 	return (
-		<html lang={currentLanguage} dir={dir(currentLanguage)}>
+		<html lang={language} dir={dir(language)}>
 			<body>
-				<Navbar language={currentLanguage} />
+				<Navbar language={language} />
 				{children}
 			</body>
 		</html>

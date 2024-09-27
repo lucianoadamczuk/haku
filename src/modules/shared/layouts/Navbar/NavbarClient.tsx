@@ -6,8 +6,8 @@ import Icon from '../../components/Icon/Icon';
 import Title from '../../components/Title/Title';
 import styles from './NavbarClient.module.css';
 import { languages } from '@/app/i18n/configuration/settings';
-import { useParams, useRouter } from 'next/navigation';
-import { StaticParams } from '@/modules/types';
+import { useParams, usePathname, useRouter } from 'next/navigation';
+import { AppParams } from '@/modules/types';
 
 interface Props {
 	routes: { name: string; pathname: string }[];
@@ -24,12 +24,16 @@ export default function NavbarClient({ routes }: Props) {
 		borderRadius: isOpen ? '0px' : '100%',
 	} as CSSProperties;
 
-	const params = useParams<StaticParams>();
-
+	const params = useParams<AppParams>();
+	const pathname = usePathname();
 	const router = useRouter();
+
 	function changeLanguage(e: ChangeEvent<HTMLSelectElement>) {
-		const event = e.target.value;
-		router.replace(`/${event}`);
+		const newLanguage = e.target.value;
+		const splitedPathname = pathname.split('/').filter(Boolean);
+		splitedPathname[0] = newLanguage;
+		const newURL = `/${splitedPathname.join('/')}`;
+		router.replace(newURL);
 	}
 
 	return (

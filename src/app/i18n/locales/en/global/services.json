@@ -1,7 +1,7 @@
 {
 	"services": [
 		{
-			"slug": "sakura-plan",
+			"slug": "plan-sakura",
 			"title": "Sakura Plan",
 			"japaneseTitle": "桜プラン",
 			"text": "Inspired by the cherry blossom, a symbol of new beginnings. The perfect initial plan that provides the essentials for growth.",
@@ -27,10 +27,11 @@
 					"text": "Simple report of follower growth, engagement (likes, comments, shares), and basic audience analysis."
 				}
 			],
+			"src": "/images/shared/service-1.svg",
 			"alt": "Cherry blossom."
 		},
 		{
-			"slug": "fuji-plan",
+			"slug": "plan-fuji",
 			"title": "Fuji Plan",
 			"japaneseTitle": "富士プラン",
 			"text": "Named after Mount Fuji, a symbol of strength. A service that provides greater solidity and marketing structure.",
@@ -60,10 +61,11 @@
 					"text": "Reports with key metrics (CPC, CTR, leads generated) and improvement suggestions."
 				}
 			],
+			"src": "/images/shared/service-2.svg",
 			"alt": "Mount Fuji."
 		},
 		{
-			"slug": "bushido-plan",
+			"slug": "plan-bushido",
 			"title": "Bushido Plan",
 			"japaneseTitle": "武士道プラン",
 			"text": "Inspired by military leaders, represents power and strategic control. A plan for companies seeking strong leadership in marketing.",
@@ -93,10 +95,11 @@
 					"text": "Weekly campaign analysis and continuous adjustment to maximize ROI."
 				}
 			],
+			"src": "/images/shared/service-3.svg",
 			"alt": "A samurai."
 		},
 		{
-			"slug": "tenka-plan",
+			"slug": "plan-tenka",
 			"title": "Tenka Plan",
 			"japaneseTitle": "天下プラン",
 			"text": "Tenka means 'under the sky', used to refer to absolute control. This plan represents the utmost dominance in marketing, with all top-tier services.",
@@ -126,6 +129,7 @@
 					"text": "Weekly reports on all metrics, focusing on lifetime value (LTV), customer acquisition cost (CAC), and strategies to improve retention."
 				}
 			],
+			"src": "/images/shared/service-4.svg",
 			"alt": "A dragon."
 		}
 	]

@@ -4,6 +4,7 @@ import 'i18next';
 import metadata from '../locales/es/global/metadata.json';
 import routes from '../locales/es/global/routes.json';
 import services from '../locales/es/global/services.json';
+import errors from '../locales/es/global/errors.json';
 import buttons from '../locales/es/global/buttons.json';
 /* ---------------------------------- home ---------------------------------- */
 import headerHome from '../locales/es/home/header.json';
@@ -15,6 +16,7 @@ declare module 'i18next' {
 			'global/metadata': typeof metadata;
 			'global/routes': typeof routes;
 			'global/services': typeof services;
+			'global/errors': typeof errors;
 			'global/buttons': typeof buttons;
 			/* ---------------------------------- home ---------------------------------- */
 			'home/header': typeof headerHome;

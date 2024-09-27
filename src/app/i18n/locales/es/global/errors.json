@@ -1,0 +1,7 @@
+{
+	"notFound": {
+		"title": "Página no encontrada",
+		"text": "Lo sentimos, la página que estás buscando no existe o ha sido movida. Por favor, verifica la URL o vuelve a la página de inicio para continuar explorando.",
+		"button": "Inicio"
+	}
+}
