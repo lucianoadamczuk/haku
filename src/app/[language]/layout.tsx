@@ -38,7 +38,7 @@ export default function RootLayout({ children, params }: Props) {
 			<body>
 				<Navbar language={language} />
 				{children}
-				<Footer />
+				<Footer language={language} />
 			</body>
 		</html>
 	);

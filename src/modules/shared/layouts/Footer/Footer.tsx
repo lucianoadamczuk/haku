@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Icons } from '../../components/Icon/types/Icon';
 import Title from '../../components/Title/Title';
 import Text from '../../components/Text/Text';
+import { useTranslation } from '@/app/i18n/configuration/server';
 
 /* ---------------------------------- haku ---------------------------------- */
 const HakuBox = () => {
@@ -32,13 +33,13 @@ const ContactBox = () => {
 					tag='span'
 					size='sm'
 					color='light-transparent'
-					text={`Phone: ${hakuInformation.phone}`}
+					text={hakuInformation.phone}
 				/>
 				<Text
 					tag='span'
 					size='sm'
 					color='light-transparent'
-					text={`Email: ${hakuInformation.email}`}
+					text={hakuInformation.email}
 				/>
 			</div>
 		</div>
@@ -67,26 +68,27 @@ const SMBox = () => {
 };
 
 /* -------------------------------- copyright ------------------------------- */
-const CopyrightBox = () => {
+const CopyrightBox = (text: string) => {
 	return (
 		<div className={styles.copyrightBox}>
-			<Text
-				tag='span'
-				size='sm'
-				color='primary-light'
-				text='HAKU | todos los derechos reservados'
-			/>
+			<Text tag='span' size='sm' color='primary-light' text={text} />
 		</div>
 	);
 };
 
-export default function Footer() {
+interface Props {
+	language: string;
+}
+export default async function Footer({ language }: Props) {
+	const { t } = await useTranslation(language, 'global/footer');
+
+	const copyrightText = t('footer.copyright', { ns: 'global/footer' });
 	return (
 		<footer className={styles.footer}>
 			{HakuBox()}
 			{ContactBox()}
 			{SMBox()}
-			{CopyrightBox()}
+			{CopyrightBox(copyrightText)}
 		</footer>
 	);
 }

@@ -14,6 +14,8 @@ import { Icons } from '@/modules/shared';
 import { EffectFade, Navigation, Pagination } from 'swiper/modules';
 import SlideWhoWeAre from '../../components/SlideWhoWeAre/SlideWhoWeAre';
 
+import './WhoWeAre.css';
+
 interface Props {
 	language: string;
 }
@@ -47,6 +49,7 @@ export default function WhoWeAre({ language }: Props) {
 								text={text}
 								index={index}
 								icon={icon as Icons}
+								noGrid={content.length - 1 === index && true}
 							/>
 						</SwiperSlide>
 					);

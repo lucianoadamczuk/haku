@@ -1,0 +1,10 @@
+.WhoWeAre > .swiper-pagination > .swiper-pagination-bullet {
+	background-color: var(--color-secondary);
+	transition: var(--transition-normal);
+}
+
+.WhoWeAre > .swiper-pagination > .swiper-pagination-bullet-active {
+	width: 25px;
+	border-radius: var(--rounded-lg);
+	transition: var(--transition-normal);
+}

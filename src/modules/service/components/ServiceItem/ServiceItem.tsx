@@ -9,7 +9,7 @@ interface Props {
 export default function ServiceItem({ index, title, text }: Props) {
 	return (
 		<div className={styles.serviceItem}>
-			<Title tag='span' size='xl' text={`- ${index} -`} color='secondary' />
+			<Title tag='span' size='xl' color='secondary' text={`- ${index} -`} />
 			<Title tag='h5' size='lg' text={title} />
 
 			<Text tag='p' text={text} />

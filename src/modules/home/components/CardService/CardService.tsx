@@ -1,7 +1,7 @@
-import { Anchor, Text, Title } from '@/modules/shared';
-import styles from './CardService.module.css';
-import Image from 'next/image';
+import { Text, Title } from '@/modules/shared';
 import { sanitizeString } from '@/utilities';
+import Image from 'next/image';
+import styles from './CardService.module.css';
 interface Props {
 	href: string;
 	japaneseTitle: string;
@@ -34,7 +34,7 @@ export default function CardService({
 					key={key}
 					tag='span'
 					fontFamily='japanese'
-					size='xl'
+					size='lg'
 					text={text}
 				/>
 			);
@@ -48,8 +48,8 @@ export default function CardService({
 				<div className={styles.japaneseTitleContainer}>
 					{splitJapaneseTitle(japaneseTitle)}
 				</div>
-				<Title tag='h4' size='lg' text={title} />
-				<Text tag='p' size='sm' text={text} />
+				<Title tag='h4' size='lg' className={styles.title} text={title} />
+				<Text tag='p' size='sm' className={styles.text} text={text} />
 				<Image
 					src={src}
 					alt={alt}
@@ -58,7 +58,7 @@ export default function CardService({
 					className={styles.image}
 				/>
 			</div>
-			<Text tag='span' text={button} />
+			<Text tag='span' className={styles.seeMore} text={button} />
 		</a>
 	);
 }

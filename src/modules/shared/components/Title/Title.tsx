@@ -2,7 +2,13 @@ interface Props {
 	tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
 	text: string;
 	size?: '2xl' | 'xl' | 'lg';
-	color?: 'light' | 'secondary';
+	color?:
+		| 'light'
+		| 'secondary'
+		| 'plan-sakura'
+		| 'plan-fuji'
+		| 'plan-bushido'
+		| 'plan-tenka';
 	fontFamily?: 'japanese';
 	className?: string;
 }

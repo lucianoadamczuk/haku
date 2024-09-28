@@ -1,3 +1,4 @@
 :root {
-	--rounded-md: 3px;
+	--rounded-md: 5px;
+	--rounded-lg: 15px;
 }

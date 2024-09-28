@@ -1,12 +1,15 @@
 .cardService {
+	width: 100%;
 	/*Display stuff*/
 	display: grid;
 	/*Miscellaneous*/
 	gap: var(--space-sm);
 	place-items: center;
+	transition: all var(--transition-normal) allow-discrete;
 }
 
 .contentContainer {
+	width: 100%;
 	/*Display stuff*/
 	display: grid;
 	/*Box model stuff*/
@@ -17,6 +20,7 @@
 	/*Miscellaneous*/
 	place-content: end;
 	box-shadow: 1px 2px 2px 2px var(--color-primary);
+	overflow: hidden;
 }
 
 .circle {
@@ -45,6 +49,14 @@
 	top: var(--space-md);
 }
 
+.title {
+	transition: all var(--transition-normal) allow-discrete;
+}
+
+.text {
+	transition: all var(--transition-normal) allow-discrete;
+}
+
 .image {
 	/*Positioning stuff*/
 	position: absolute;
@@ -56,4 +68,29 @@
 	/*Miscellaneous*/
 	inset: 0;
 	object-fit: cover;
+	z-index: -1;
+	transition: all var(--transition-slow) allow-discrete;
+}
+
+@media (hover: hover) {
+	.cardService:hover {
+		transform: scale(105%);
+	}
+
+	.cardService:hover .image {
+		transform: scale(120%);
+	}
+
+	.cardService:hover .title {
+		transform: translateY(100%);
+	}
+
+	.cardService:hover .text {
+		transform: translateY(50%);
+		opacity: 0;
+	}
+
+	.seeMore {
+		display: none;
+	}
 }

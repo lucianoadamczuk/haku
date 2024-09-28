@@ -6,7 +6,11 @@ import styles from './HeaderService.module.css';
 interface Props {
 	service: Service;
 }
+
+type ColorPlans = 'plan-sakura' | 'plan-fuji' | 'plan-bushido' | 'plan-tenka';
+
 export default async function HeaderService({ service }: Props) {
+	const slug = service.slug;
 	const japaneseTitle = service.japaneseTitle;
 	const title = service.title;
 	const text = service.text;
@@ -16,7 +20,12 @@ export default async function HeaderService({ service }: Props) {
 	return (
 		<header className={styles.headerService}>
 			<div>
-				<Title tag='span' size='lg' text={japaneseTitle} />
+				<Title
+					tag='span'
+					size='lg'
+					color={slug as ColorPlans}
+					text={japaneseTitle}
+				/>
 				<Title tag='h1' size='2xl' text={title} />
 				<Text tag='p' text={text} />
 			</div>

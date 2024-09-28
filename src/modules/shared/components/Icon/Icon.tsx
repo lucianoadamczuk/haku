@@ -16,14 +16,22 @@ interface Props {
 	as: Icons;
 	className?: string;
 	color?: 'primary' | 'light';
+	full?: boolean;
 	hover?: boolean;
 	onClick?: () => void;
 }
-export default function Icon({ as, color, hover, className, onClick }: Props) {
+export default function Icon({
+	as,
+	color,
+	hover,
+	full,
+	className,
+	onClick,
+}: Props) {
 	/* --------------------------------- styles --------------------------------- */
 	return (
 		<div
-			className={`${styles.icon} ${styles[color ? color : 'light']} ${hover && styles.hover} ${className}`}
+			className={`${styles.icon} ${styles[color || 'light']} ${hover && styles.hover} ${full ? styles.full : ''} ${className}`}
 			onClick={onClick}
 		>
 			{as === 'instagram' && instagram}
