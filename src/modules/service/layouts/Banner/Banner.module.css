@@ -1,0 +1,8 @@
+.banner {
+	height: 100vh;
+	background-color: var(--color-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: var(--space-md) var(--space-container);
+}

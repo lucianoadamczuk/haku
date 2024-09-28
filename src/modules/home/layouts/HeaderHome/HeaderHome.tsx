@@ -15,7 +15,7 @@ export default async function HeaderHome({ language }: Props) {
 
 			<div className={styles.textContainer}>
 				<Title tag='h1' text='HAKU' size='2xl' />
-				<Title tag='h2' size='lg' color='secondary' text={subtitle} />
+				<Title tag='h2' color='secondary' text={subtitle} />
 			</div>
 		</header>
 	);

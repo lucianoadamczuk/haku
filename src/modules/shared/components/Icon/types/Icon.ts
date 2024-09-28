@@ -1,7 +1,7 @@
 export type Icons =
 	| 'instagram'
 	| 'linkedIn'
-	| 'facebook'
+	| 'meta'
 	| 'x'
 	| 'menu'
 	| 'close'

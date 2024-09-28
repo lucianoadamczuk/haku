@@ -1,7 +1,7 @@
 import styles from './Icon.module.css';
 import {
 	close,
-	facebook,
+	meta,
 	instagram,
 	linkedIn,
 	menu,
@@ -28,7 +28,7 @@ export default function Icon({ as, color, hover, className, onClick }: Props) {
 		>
 			{as === 'instagram' && instagram}
 			{as === 'linkedIn' && linkedIn}
-			{as === 'facebook' && facebook}
+			{as === 'meta' && meta}
 			{as === 'x' && x}
 			{as === 'menu' && menu}
 			{as === 'close' && close}

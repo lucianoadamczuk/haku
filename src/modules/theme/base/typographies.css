@@ -22,5 +22,5 @@
 	--font-size-md: 1.6rem;
 	--font-size-lg: clamp(2.6rem, 10vw, 3rem);
 	--font-size-xl: clamp(3rem, 10vw, 6rem);
-	--font-size-2xl: clamp(6rem, 10vw, 8rem);
+	--font-size-2xl: clamp(5rem, 10vw, 8rem);
 }

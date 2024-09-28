@@ -13,5 +13,5 @@ export default async function Navbar({ language }: Props) {
 	});
 	const routes = Object.values(routesObject);
 
-	return <NavbarClient routes={routes} />;
+	return <NavbarClient routes={routes} language={language} />;
 }

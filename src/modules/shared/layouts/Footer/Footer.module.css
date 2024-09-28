@@ -1,0 +1,57 @@
+.footer {
+	/*Display stuff*/
+	display: grid;
+	/*Box model stuff*/
+	padding: var(--space-lg) var(--space-container);
+	background-color: var(--color-primary);
+	/*Miscellaneous*/
+	place-items: center;
+	gap: var(--space-md);
+}
+
+.hakuBox,
+.smBox,
+.contactBox {
+	/*Display stuff*/
+	display: grid;
+	/*Typography stuff*/
+	text-align: center;
+}
+
+.smContainer,
+.contactBoxesContainer {
+	/*Display stuff*/
+	display: flex;
+	/*Miscellaneous*/
+	gap: var(--space-sm);
+}
+
+.copyrightBox {
+	margin-top: var(--space-lg);
+}
+
+@media (width > 700px) {
+	.footer {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			'hakuBox  smBox'
+			'contactBox smBox'
+			'copyrightBox copyrightBox';
+	}
+
+	.hakuBox {
+		grid-area: hakuBox;
+	}
+
+	.smBox {
+		grid-area: smBox;
+	}
+
+	.contactBox {
+		grid-area: contactBox;
+	}
+
+	.copyrightBox {
+		grid-area: copyrightBox;
+	}
+}

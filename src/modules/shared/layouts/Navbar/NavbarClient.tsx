@@ -11,9 +11,10 @@ import { AppParams } from '@/modules/types';
 
 interface Props {
 	routes: { name: string; pathname: string }[];
+	language: string;
 }
 
-export default function NavbarClient({ routes }: Props) {
+export default function NavbarClient({ routes, language }: Props) {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	function toggle() {
 		setIsOpen(!isOpen);
@@ -22,6 +23,7 @@ export default function NavbarClient({ routes }: Props) {
 	const menuStyle = {
 		left: isOpen ? '0px' : '100%',
 		borderRadius: isOpen ? '0px' : '100%',
+		opacity: isOpen ? 1 : 0,
 	} as CSSProperties;
 
 	const params = useParams<AppParams>();
@@ -53,20 +55,40 @@ export default function NavbarClient({ routes }: Props) {
 				})}
 			</select>
 
-			<Title tag='span' color='secondary' text='HAKU' />
+			<Title tag='span' color='secondary' text='HAKU' className={styles.logo} />
 
-			{isOpen ? (
-				<Icon as='close' color='light' onClick={() => toggle()} />
-			) : (
-				<Icon as='menu' color='light' onClick={() => toggle()} />
-			)}
+			<>
+				{isOpen ? (
+					<Icon
+						as='close'
+						color='light'
+						className={styles.icon}
+						onClick={() => toggle()}
+					/>
+				) : (
+					<Icon
+						as='menu'
+						color='light'
+						className={styles.icon}
+						onClick={() => toggle()}
+					/>
+				)}
+			</>
 
 			<div className={styles.linksContainer} style={menuStyle}>
 				{routes.map((r) => {
 					const key = `route_${r.pathname}`;
-					const href = `#${r.pathname}`;
+					const href = `/${language}/#${r.pathname}`;
 					const text = r.name;
-					return <Anchor key={key} href={href} text={text} />;
+					return (
+						<Anchor
+							key={key}
+							color='light'
+							href={href}
+							text={text}
+							onClick={toggle}
+						/>
+					);
 				})}
 			</div>
 		</nav>

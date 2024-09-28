@@ -4,6 +4,7 @@ interface Props {
 	size?: '2xl' | 'xl' | 'lg';
 	color?: 'light' | 'secondary';
 	fontFamily?: 'japanese';
+	className?: string;
 }
 
 export default function Title({
@@ -12,6 +13,7 @@ export default function Title({
 	text,
 	color,
 	fontFamily,
+	className,
 }: Props) {
 	const sizeStyle = `var(--font-size-${size})`;
 	const colorStyle = `var(--color-${color})`;
@@ -21,6 +23,7 @@ export default function Title({
 			: 'var(--font-family-title)';
 	return (
 		<Tag
+			className={className}
 			style={{
 				fontSize: sizeStyle,
 				color: colorStyle,

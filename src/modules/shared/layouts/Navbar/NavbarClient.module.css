@@ -1,8 +1,9 @@
 .navbarClient {
 	/*Display stuff*/
-	display: flex;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-areas: 'select logo icon';
 	align-items: center;
-	justify-content: space-between;
 	/*Positioning stuff*/
 	position: fixed;
 	left: 0;
@@ -15,6 +16,7 @@
 }
 
 .select {
+	width: fit-content;
 	/*Box model stuff*/
 	border: 0px;
 	border-radius: var(--rounded-md);
@@ -24,11 +26,21 @@
 	color: var(--color-light);
 	/*Miscellaneous*/
 	cursor: pointer;
-
+	grid-template-areas: select;
 	& > option {
 		background-color: var(--color-primary);
 		border-radius: 2px;
 	}
+}
+
+.logo {
+	grid-area: logo;
+	place-self: center;
+}
+
+.icon {
+	grid-area: icon;
+	place-self: end;
 }
 
 .linksContainer {
@@ -44,11 +56,39 @@
 	width: 100%;
 	height: calc(100vh - 65px);
 	padding: var(--space-lg) var(--space-container);
-	background-color: var(--color-light-transparent);
+	background-color: var(--color-primary-transparent);
 	/*Typography stuff*/
 	text-align: center;
-	/*Manipulations stuff*/
-	transition: all var(--transition-slow) allow-discrete;
-	/*Miscellaneous*/
+	transition: all var(--transition-normal) allow-discrete;
 	gap: var(--space-md);
+	backdrop-filter: blur(10px);
+}
+
+@media screen and (min-width: 700px) {
+	.navbarClient {
+		display: grid;
+		justify-content: initial;
+		grid-template-columns: 1fr auto auto;
+		grid-template-areas: 'logo links select';
+		gap: var(--space-md);
+	}
+
+	.logo {
+		place-self: start;
+	}
+
+	.linksContainer {
+		width: fit-content;
+		height: fit-content;
+		position: initial;
+		flex-direction: row;
+		left: 0;
+		opacity: 1 !important;
+		padding: 0;
+		grid-area: links;
+	}
+
+	.icon {
+		display: none;
+	}
 }

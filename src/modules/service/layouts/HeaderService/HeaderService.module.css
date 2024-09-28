@@ -1,13 +1,14 @@
 .headerService {
 	/*Display stuff*/
 	display: grid;
-	grid-template-rows: auto 50%;
+	grid-template-rows: min-content 50%;
 	align-items: center;
 	/*Box model stuff*/
 	min-height: 100vh;
 	padding: var(--space-sm) var(--space-container);
 	/*Miscellaneous*/
 	gap: var(--space-sm);
+	place-items: center;
 }
 
 .image {
@@ -16,4 +17,16 @@
 	height: 100%;
 	/*Miscellaneous*/
 	object-fit: contain;
+}
+
+@media (orientation: landscape) and (width > 700px) {
+	.headerService {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100vh;
+	}
+
+	.image {
+		width: 80%;
+		height: 80%;
+	}
 }

@@ -2,7 +2,7 @@ interface Props {
 	tag: 'p' | 'small' | 'span';
 	text: string;
 	size?: 'sm';
-	color?: 'light' | 'secondary';
+	color?: 'primary-light' | 'light' | 'light-transparent' | 'secondary';
 }
 
 export default function Text({ tag: Tag, size, text, color }: Props) {
