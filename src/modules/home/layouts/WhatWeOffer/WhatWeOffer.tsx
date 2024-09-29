@@ -1,28 +1,25 @@
 import { Title } from '@/modules/shared';
-import styles from './WhatWeOffer.module.css';
+import { Service } from '@/modules/types';
 import CardService from '../../components/CardService/CardService';
-import { useTranslation } from '@/app/i18n/configuration/server';
+import styles from './WhatWeOffer.module.css';
 
 interface Props {
 	language: string;
+	id: string;
+	title: string;
+	services: Service[];
+	button: string;
 }
-export default async function WhatWeOffer({ language }: Props) {
-	const { t } = await useTranslation(language, [
-		'global/services',
-		'global/buttons',
-		'global/routes',
-	]);
-
-	const services = t('services', {
-		ns: 'global/services',
-		returnObjects: true,
-	});
-
-	const button = t('seeMore', { ns: 'global/buttons' });
-
+export default async function WhatWeOffer({
+	id,
+	language,
+	title,
+	services,
+	button,
+}: Props) {
 	return (
-		<section className={styles.whatWeOffer}>
-			<Title tag='h3' size='xl' text='Lo que ofrecemos' />
+		<section className={styles.whatWeOffer} id={id}>
+			<Title tag='h3' size='xl' text={title} />
 
 			<div className={styles.cardsContainer}>
 				{services.map((s, index) => {
@@ -31,7 +28,7 @@ export default async function WhatWeOffer({ language }: Props) {
 					const japaneseTitle = s.japaneseTitle;
 					const title = s.title;
 					const text = s.text;
-					const src = `/images/shared/service-${index + 1}.svg`;
+					const src = `/images/shared/${s.slug}.svg`;
 					const alt = s.alt;
 
 					return (

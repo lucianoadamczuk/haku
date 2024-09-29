@@ -20,7 +20,7 @@ export default function NotFound() {
 
 	return (
 		<section className={styles.notFound}>
-			<div>
+			<div className={styles.contentContainer}>
 				<Title tag='span' size='lg' text={title} />
 				<Text tag='p' text={text} />
 			</div>

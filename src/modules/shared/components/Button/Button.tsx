@@ -1,11 +1,15 @@
 import stlyes from './Button.module.css';
 interface Props {
 	text: string;
+	alwaysFull?: boolean;
 	onClick: () => void;
 }
-export default function Button({ text, onClick }: Props) {
+export default function Button({ text, alwaysFull, onClick }: Props) {
 	return (
-		<button className={stlyes.button} onClick={onClick}>
+		<button
+			className={`${stlyes.button} ${alwaysFull ? stlyes.alwaysFull : ''}`}
+			onClick={onClick}
+		>
 			{text}
 		</button>
 	);

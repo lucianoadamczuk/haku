@@ -1,0 +1,16 @@
+.form {
+	/*Display stuff*/
+	display: grid;
+	/*Box model stuff*/
+	width: 100%;
+	max-width: 600px;
+	padding: var(--space-md);
+	border-radius: var(--rounded-lg);
+	background-color: var(--color-primary);
+	/*Typography stuff*/
+	text-align: start;
+	color: white;
+	/*Miscellaneous*/
+	gap: var(--space-md);
+	place-items: center;
+}

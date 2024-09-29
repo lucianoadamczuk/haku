@@ -9,7 +9,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import required modules
-import { useTranslation } from '@/app/i18n/configuration/client';
 import { Icons } from '@/modules/shared';
 import { EffectFade, Navigation, Pagination } from 'swiper/modules';
 import SlideWhoWeAre from '../../components/SlideWhoWeAre/SlideWhoWeAre';
@@ -17,15 +16,14 @@ import SlideWhoWeAre from '../../components/SlideWhoWeAre/SlideWhoWeAre';
 import './WhoWeAre.css';
 
 interface Props {
-	language: string;
+	id: string;
+	content: { title: string; text: string }[];
 }
-export default function WhoWeAre({ language }: Props) {
-	const { t } = useTranslation(language, 'home/whoWeAre');
-	const content = t('slides', { returnObjects: true });
+export default function WhoWeAre({ id, content }: Props) {
 	const slideIcons = ['people', 'target', 'rocket'];
 
 	return (
-		<section>
+		<section id={id}>
 			<Swiper
 				spaceBetween={30}
 				effect={'fade'}

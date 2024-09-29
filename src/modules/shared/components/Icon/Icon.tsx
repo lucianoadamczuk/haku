@@ -9,6 +9,7 @@ import {
 	rocket,
 	target,
 	x,
+	talk,
 } from './constants/constants';
 import { Icons } from './types/Icon';
 
@@ -41,7 +42,9 @@ export default function Icon({
 			{as === 'menu' && menu}
 			{as === 'close' && close}
 			{as === 'people' && people}
-			{as === 'rocket' && rocket} {as === 'target' && target}
+			{as === 'rocket' && rocket}
+			{as === 'target' && target}
+			{as === 'talk' && talk}
 		</div>
 	);
 }

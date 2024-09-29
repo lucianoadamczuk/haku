@@ -1,8 +1,12 @@
 .banner {
-	height: 100vh;
-	background-color: var(--color-primary);
+	/*Display stuff*/
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	/*Box model stuff*/
+	height: 100vh;
 	padding: var(--space-md) var(--space-container);
+	background-color: var(--color-primary);
+	/*Typography stuff*/
+	text-align: center;
 }

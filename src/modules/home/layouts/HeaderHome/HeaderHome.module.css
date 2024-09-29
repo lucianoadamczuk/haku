@@ -1,7 +1,7 @@
 .headerHome {
 	/*Display stuff*/
 	display: grid;
-	grid-template-rows: 50% 50%;
+	grid-template-rows: 50% min-content;
 	/*Box model stuff*/
 	height: 100vh;
 	padding: var(--space-xl) var(--space-container) var(--space-sm)
@@ -21,4 +21,11 @@
 	text-align: center;
 	/*Miscellaneous*/
 	place-self: center;
+}
+
+@media (width > 700px) {
+	.headerHome {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
 }

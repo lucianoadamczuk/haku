@@ -23,37 +23,36 @@ const HakuBox = () => {
 };
 
 /* --------------------------------- contact -------------------------------- */
-const ContactBox = () => {
+interface ContactBoxProps {
+	contactTitle: string;
+	phone: string;
+	email: string;
+}
+const ContactBox = ({ contactTitle, phone, email }: ContactBoxProps) => {
 	return (
 		<div className={styles.contactBox}>
-			<Title tag='h6' color='light' text='Contacto' />
+			<Title tag='h6' color='light' text={contactTitle} />
 
 			<div className={styles.contactBoxesContainer}>
-				<Text
-					tag='span'
-					size='sm'
-					color='light-transparent'
-					text={hakuInformation.phone}
-				/>
-				<Text
-					tag='span'
-					size='sm'
-					color='light-transparent'
-					text={hakuInformation.email}
-				/>
+				<Text tag='span' size='sm' color='light-transparent' text={phone} />
+				<Text tag='span' size='sm' color='light-transparent' text={email} />
 			</div>
 		</div>
 	);
 };
 
 /* ------------------------------ social medias ----------------------------- */
-const SMBox = () => {
+interface SMBoxProps {
+	socialMediasTitle: string;
+	socialMedias: { [key: string]: string };
+}
+const SMBox = ({ socialMediasTitle, socialMedias }: SMBoxProps) => {
 	return (
 		<div className={styles.smBox}>
-			<Title tag='span' color='light' text='Social media' />
+			<Title tag='span' color='light' text={socialMediasTitle} />
 
 			<div className={styles.smContainer}>
-				{Object.entries(hakuInformation.socialMedias).map(([icon, href]) => {
+				{Object.entries(socialMedias).map(([icon, href]) => {
 					const key = `social_media_${icon}`;
 
 					return (
@@ -68,27 +67,42 @@ const SMBox = () => {
 };
 
 /* -------------------------------- copyright ------------------------------- */
-const CopyrightBox = (text: string) => {
+interface CopyrightBoxProps {
+	copyrightTitle: string;
+}
+const CopyrightBox = ({ copyrightTitle }: CopyrightBoxProps) => {
 	return (
 		<div className={styles.copyrightBox}>
-			<Text tag='span' size='sm' color='primary-light' text={text} />
+			<Text tag='span' size='sm' color='primary-light' text={copyrightTitle} />
 		</div>
 	);
 };
 
 interface Props {
-	language: string;
+	contactTitle: string;
+	email: string;
+	phone: string;
+	socialMediasTitle: string;
+	socialMedias: { [key: string]: string };
+	copyrightTitle: string;
 }
-export default async function Footer({ language }: Props) {
-	const { t } = await useTranslation(language, 'global/footer');
-
-	const copyrightText = t('footer.copyright', { ns: 'global/footer' });
+export default async function Footer({
+	contactTitle,
+	phone,
+	email,
+	socialMediasTitle,
+	socialMedias,
+	copyrightTitle,
+}: Props) {
 	return (
 		<footer className={styles.footer}>
-			{HakuBox()}
-			{ContactBox()}
-			{SMBox()}
-			{CopyrightBox(copyrightText)}
+			<HakuBox />
+			<ContactBox contactTitle={contactTitle} email={email} phone={phone} />
+			<SMBox
+				socialMediasTitle={socialMediasTitle}
+				socialMedias={socialMedias}
+			/>
+			<CopyrightBox copyrightTitle={copyrightTitle} />
 		</footer>
 	);
 }

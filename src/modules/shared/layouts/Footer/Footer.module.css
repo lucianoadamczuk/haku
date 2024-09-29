@@ -32,11 +32,10 @@
 
 @media (width > 700px) {
 	.footer {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas:
-			'hakuBox  smBox'
-			'contactBox smBox'
-			'copyrightBox copyrightBox';
+			'hakuBox contactBox smBox'
+			'copyrightBox copyrightBox copyrightBox';
 	}
 
 	.hakuBox {

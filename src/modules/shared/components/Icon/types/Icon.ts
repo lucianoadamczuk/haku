@@ -7,4 +7,5 @@ export type Icons =
 	| 'close'
 	| 'people'
 	| 'target'
-	| 'rocket';
+	| 'rocket'
+	| 'talk';

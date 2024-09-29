@@ -1,11 +1,15 @@
 export { default as Anchor } from './components/Anchor/Anchor';
 export { default as Button } from './components/Button/Button';
+export { default as Form } from './components/Form/Form';
+export { default as Input } from './components/Form/Input/Input';
+export { default as Textarea } from './components/Form/Textarea/Textarea';
 export { default as Icon } from './components/Icon/Icon';
 export * from './components/Icon/constants/constants';
 export * from './components/Icon/types/Icon';
 export { default as Text } from './components/Text/Text';
 export { default as Title } from './components/Title/Title';
+export { default as FooterContainer } from './containers/FooterContainer';
+export { default as NavbarContainer } from './containers/NavbarContainer';
 export { default as Footer } from './layouts/Footer/Footer';
 export { default as Navbar } from './layouts/Navbar/Navbar';
-export { default as NavbarClient } from './layouts/Navbar/NavbarClient';
 export { default as NotFound } from './layouts/NotFound/NotFound';

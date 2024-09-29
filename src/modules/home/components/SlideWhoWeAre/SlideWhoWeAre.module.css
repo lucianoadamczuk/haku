@@ -10,6 +10,8 @@
 	min-height: 100vh;
 	padding: var(--space-xl) var(--space-container);
 	background-color: var(--color-primary);
+	/*Typography stuff*/
+	text-align: center;
 	/*Miscellaneous*/
 	gap: var(--space-md);
 	place-items: center;
@@ -20,6 +22,7 @@
 	height: 150px;
 }
 
+/* the noGrid class is for the last slide */
 .noGrid {
 	grid-template-rows: 1fr;
 	text-align: center;
@@ -42,6 +45,7 @@
 	.slideWhoWeAre {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
+		text-align: start;
 	}
 
 	.iconContainer {

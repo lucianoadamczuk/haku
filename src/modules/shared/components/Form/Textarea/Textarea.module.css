@@ -1,0 +1,30 @@
+.box {
+	/*Display stuff*/
+	display: flex;
+	flex-direction: column;
+	/*Box model stuff*/
+	width: 100%;
+}
+
+.label {
+	color: var(--color-light);
+}
+
+.textarea {
+	height: 100px;
+	/*Box model stuff*/
+	padding: var(--space-xs) var(--space-sm);
+	border: 0px;
+	border-radius: var(--rounded-md);
+	outline: none;
+	background-color: var(--color-light-transparent);
+	/*Manipulations stuff*/
+	opacity: 0.5;
+	/*Miscellaneous*/
+	resize: none;
+}
+
+.textarea:focus {
+	/*Manipulations stuff*/
+	opacity: 1;
+}

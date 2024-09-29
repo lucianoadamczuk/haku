@@ -1,7 +1,30 @@
 .button {
+	/*Box model stuff*/
 	width: 100%;
 	padding: var(--space-sm);
-	background-color: red;
-	border-radius: var(--rounded-md);
 	border: 0px;
+	border-radius: var(--rounded-md);
+	background-color: var(--color-secondary);
+	font-family: var(--font-family-title);
+	text-transform: uppercase;
+	color: var(--color-light);
+	transition: var(--transition-fast);
+}
+
+.button:hover {
+	background-color: var(--color-secondary-light);
+}
+
+.button:active {
+	transform: scale(95%);
+}
+
+@media (width > 700px) {
+	.button {
+		width: fit-content;
+	}
+
+	.alwaysFull {
+		width: 100%;
+	}
 }

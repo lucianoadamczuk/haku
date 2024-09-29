@@ -10,6 +10,7 @@ import buttons from '../locales/es/global/buttons.json';
 /* ---------------------------------- home ---------------------------------- */
 import headerHome from '../locales/es/home/header.json';
 import whoWeAre from '../locales/es/home/whoWeAre.json';
+import whatWeOffer from '../locales/es/home/whatWeOffer.json';
 declare module 'i18next' {
 	interface CustomTypeOptions {
 		resources: {
@@ -23,6 +24,7 @@ declare module 'i18next' {
 			/* ---------------------------------- home ---------------------------------- */
 			'home/header': typeof headerHome;
 			'home/whoWeAre': typeof whoWeAre;
+			'home/whatWeOffer': typeof whatWeOffer;
 		};
 	}
 }

@@ -1,4 +1,4 @@
-.navbarClient {
+.navbar {
 	/*Display stuff*/
 	display: grid;
 	grid-template-columns: auto auto auto;
@@ -51,10 +51,10 @@
 	justify-content: center;
 	/*Positioning stuff*/
 	position: absolute;
-	top: 65px;
+	top: 60px;
 	/*Box model stuff*/
 	width: 100%;
-	height: calc(100vh - 65px);
+	height: calc(100vh - 60px);
 	padding: var(--space-lg) var(--space-container);
 	background-color: var(--color-primary-transparent);
 	/*Typography stuff*/
@@ -64,8 +64,8 @@
 	backdrop-filter: blur(10px);
 }
 
-@media screen and (min-width: 700px) {
-	.navbarClient {
+@media (width > 700px) {
+	.navbar {
 		display: grid;
 		justify-content: initial;
 		grid-template-columns: 1fr auto auto;

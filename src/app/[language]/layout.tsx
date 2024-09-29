@@ -1,4 +1,4 @@
-import { Footer, Navbar } from '@/modules/shared';
+import { FooterContainer, Navbar, NavbarContainer } from '@/modules/shared';
 import { AppParams } from '@/modules/types';
 import { dir } from 'i18next';
 import { ReactNode } from 'react';
@@ -36,9 +36,9 @@ export default function RootLayout({ children, params }: Props) {
 	return (
 		<html lang={language} dir={dir(language)}>
 			<body>
-				<Navbar language={language} />
+				<NavbarContainer language={language} />
 				{children}
-				<Footer language={language} />
+				<FooterContainer language={language} />
 			</body>
 		</html>
 	);

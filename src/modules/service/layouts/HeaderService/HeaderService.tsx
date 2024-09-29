@@ -14,22 +14,11 @@ export default async function HeaderService({ service }: Props) {
 	const japaneseTitle = service.japaneseTitle;
 	const title = service.title;
 	const text = service.text;
-	const src = service.src;
+	const src = `/images/shared/${service.slug}.svg`;
 	const alt = service.alt;
 
 	return (
 		<header className={styles.headerService}>
-			<div>
-				<Title
-					tag='span'
-					size='lg'
-					color={slug as ColorPlans}
-					text={japaneseTitle}
-				/>
-				<Title tag='h1' size='2xl' text={title} />
-				<Text tag='p' text={text} />
-			</div>
-
 			<Image
 				src={src}
 				alt={alt}
@@ -37,6 +26,16 @@ export default async function HeaderService({ service }: Props) {
 				height={300}
 				className={styles.image}
 			/>
+			<div>
+				<Title tag='h1' size='2xl' text={title} />
+				<Text tag='p' text={text} />
+				<Title
+					tag='span'
+					size='lg'
+					color={slug as ColorPlans}
+					text={japaneseTitle}
+				/>
+			</div>
 		</header>
 	);
 }

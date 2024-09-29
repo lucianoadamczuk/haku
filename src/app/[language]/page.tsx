@@ -1,13 +1,20 @@
-import { HeaderHome, WhatWeOffer, WhoWeAre } from '@/modules/home';
+import {
+	ContactContainer,
+	HeaderHomeContainer,
+	WhatWeOfferContainer,
+	WhoWeAreContainer,
+} from '@/modules/home';
+import { Form } from '@/modules/shared';
 import { AppParams } from '@/modules/types';
 
 export default async function PageHome({ params }: { params: AppParams }) {
 	const language = params.language;
 	return (
 		<>
-			<HeaderHome language={language} />
-			<WhoWeAre language={language} />
-			<WhatWeOffer language={language} />
+			<HeaderHomeContainer language={language} />
+			<WhoWeAreContainer language={language} />
+			<WhatWeOfferContainer language={language} />
+			<ContactContainer language={language} />
 		</>
 	);
 }

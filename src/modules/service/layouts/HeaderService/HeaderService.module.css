@@ -1,14 +1,16 @@
 .headerService {
 	/*Display stuff*/
 	display: grid;
-	grid-template-rows: min-content 50%;
+	grid-template-rows: 50% min-content;
 	align-items: center;
 	/*Box model stuff*/
 	min-height: 100vh;
 	padding: var(--space-sm) var(--space-container);
+	/*Typography stuff*/
+	text-align: center;
 	/*Miscellaneous*/
 	gap: var(--space-sm);
-	place-items: center;
+	place-content: center;
 }
 
 .image {
@@ -19,10 +21,10 @@
 	object-fit: contain;
 }
 
-@media (orientation: landscape) and (width > 700px) {
+@media (width > 700px) {
 	.headerService {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 100vh;
+		grid-template-rows: 1fr;
 	}
 
 	.image {

@@ -1,4 +1,11 @@
 .serviceItem {
 	width: 100%;
 	overflow-wrap: break-word;
+	text-align: center;
+}
+
+@media (width > 700px) {
+	.serviceItem {
+		text-align: start;
+	}
 }

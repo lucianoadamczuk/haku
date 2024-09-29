@@ -1,9 +1,19 @@
 .notFound {
-	height: 100vh;
+	/*Display stuff*/
 	display: flex;
-	padding: var(--space-lg) var(--space-container);
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	/*Box model stuff*/
+	height: 100vh;
+	padding: var(--space-lg) var(--space-container);
+	/*Miscellaneous*/
 	gap: var(--space-lg);
+	place-self: center;
+	place-content: center;
+}
+
+.contentContainer {
+	/*Box model stuff*/
+	max-width: 600px;
 }
