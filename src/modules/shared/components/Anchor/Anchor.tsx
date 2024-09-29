@@ -3,7 +3,7 @@ import styles from './Anchor.module.css';
 interface Props {
 	href: string;
 	text: string;
-	color?: 'light' | 'secondary';
+	color?: 'light' | 'primary' | 'secondary';
 	onClick?: () => void;
 }
 

@@ -1,13 +1,12 @@
 'use client';
 
-import { ChangeEvent, CSSProperties, useState } from 'react';
+import { useDevice } from '@/utilities';
+import { useEffect, useState } from 'react';
 import Anchor from '../../components/Anchor/Anchor';
 import Icon from '../../components/Icon/Icon';
 import Title from '../../components/Title/Title';
+import LanguageSelector from './LanguageSelector/LanguageSelector';
 import styles from './Navbar.module.css';
-import { languages } from '@/app/i18n/configuration/settings';
-import { useParams, usePathname, useRouter } from 'next/navigation';
-import { AppParams } from '@/modules/types';
 
 interface Props {
 	routes: { name: string; pathname: string }[];
@@ -16,66 +15,71 @@ interface Props {
 
 export default function Navbar({ routes, language }: Props) {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	function toggle() {
-		setIsOpen(!isOpen);
-	}
+	const { isDesktop } = useDevice();
+	const [isScrolled, setIsScrolled] = useState(false);
 
-	const menuStyle = {
-		left: isOpen ? '0px' : '100%',
-		borderRadius: isOpen ? '0px' : '100%',
-		opacity: isOpen ? 1 : 0,
-	} as CSSProperties;
+	useEffect(() => {
+		function handleScroll() {
+			const { scrollY } = window;
+			return setIsScrolled(scrollY > 300);
+		}
 
-	const params = useParams<AppParams>();
-	const pathname = usePathname();
-	const router = useRouter();
-
-	function changeLanguage(e: ChangeEvent<HTMLSelectElement>) {
-		const newLanguage = e.target.value;
-		const splitedPathname = pathname.split('/').filter(Boolean);
-		splitedPathname[0] = newLanguage;
-		const newURL = `/${splitedPathname.join('/')}`;
-		router.replace(newURL);
-	}
+		if (isDesktop) {
+			handleScroll();
+			window.addEventListener('scroll', handleScroll);
+		}
+		return () => {
+			if (isDesktop) {
+				window.removeEventListener('scroll', handleScroll);
+			}
+		};
+	}, [isDesktop]);
 
 	return (
-		<nav className={styles.navbar}>
-			<select
-				className={styles.select}
-				value={params.language}
-				onChange={changeLanguage}
-			>
-				{languages.map((lang) => {
-					const key = `language_available_${lang}`;
-					return (
-						<option key={key} value={lang}>
-							{lang}
-						</option>
-					);
-				})}
-			</select>
+		<nav
+			className={styles.navbar}
+			style={{
+				backgroundColor: !isDesktop
+					? 'var(--color-primary)'
+					: isScrolled
+						? 'var(--color-primary)'
+						: 'var(--color-light)',
+			}}
+		>
+			{/* select */}
+			<LanguageSelector className={styles.languageSelector} />
 
+			{/* title */}
 			<Title tag='span' color='secondary' text='HAKU' className={styles.logo} />
 
+			{/* icons on mobile */}
 			<>
 				{isOpen ? (
 					<Icon
 						as='close'
 						color='light'
 						className={styles.icon}
-						onClick={() => toggle()}
+						onClick={() => setIsOpen(false)}
 					/>
 				) : (
 					<Icon
 						as='menu'
 						color='light'
 						className={styles.icon}
-						onClick={() => toggle()}
+						onClick={() => setIsOpen(true)}
 					/>
 				)}
 			</>
 
-			<div className={styles.linksContainer} style={menuStyle}>
+			{/* links */}
+			<div
+				className={styles.linksContainer}
+				style={{
+					left: !isDesktop && isOpen ? '0px' : '100%',
+					borderRadius: !isDesktop && isOpen ? '0px' : '100%',
+					opacity: !isDesktop && isOpen ? 1 : 0,
+				}}
+			>
 				{routes.map((r) => {
 					const key = `route_${r.pathname}`;
 					const href = `/${language}/#${r.pathname}`;
@@ -83,10 +87,16 @@ export default function Navbar({ routes, language }: Props) {
 					return (
 						<Anchor
 							key={key}
-							color='light'
+							color={
+								!isDesktop
+									? 'light'
+									: isDesktop && isScrolled
+										? 'light'
+										: 'primary'
+							}
 							href={href}
 							text={text}
-							onClick={toggle}
+							onClick={() => setIsOpen(false)}
 						/>
 					);
 				})}

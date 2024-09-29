@@ -1,8 +1,9 @@
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 import Text from '../../Text/Text';
 import styles from './Textarea.module.css';
 interface Props {
 	label: string;
-	register: any;
+	register: UseFormRegister<FieldValues>;
 	error: string;
 }
 export default function Textarea({ label, register, error }: Props) {

@@ -1,10 +1,11 @@
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 import Text from '../../Text/Text';
 import styles from './Input.module.css';
 
 interface Props {
 	label: string;
 	type: 'text' | 'email' | 'url';
-	register: any;
+	register: UseFormRegister<FieldValues>;
 	error: string;
 }
 export default function Input({ label, type, register, error }: Props) {

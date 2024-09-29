@@ -1,4 +1,4 @@
-import { FooterContainer, Navbar, NavbarContainer } from '@/modules/shared';
+import { FooterContainer, NavbarContainer } from '@/modules/shared';
 import { AppParams } from '@/modules/types';
 import { dir } from 'i18next';
 import { ReactNode } from 'react';

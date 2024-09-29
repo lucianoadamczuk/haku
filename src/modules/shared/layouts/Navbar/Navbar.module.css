@@ -2,7 +2,7 @@
 	/*Display stuff*/
 	display: grid;
 	grid-template-columns: auto auto auto;
-	grid-template-areas: 'select logo icon';
+	grid-template-areas: 'languageSelector logo icon';
 	align-items: center;
 	/*Positioning stuff*/
 	position: fixed;
@@ -12,25 +12,7 @@
 	/*Box model stuff*/
 	width: 100%;
 	padding: var(--space-sm) var(--space-container);
-	background-color: var(--color-primary);
-}
-
-.select {
-	width: fit-content;
-	/*Box model stuff*/
-	border: 0px;
-	border-radius: var(--rounded-md);
-	outline: none;
-	background-color: var(--color-primary);
-	/*Typography stuff*/
-	color: var(--color-light);
-	/*Miscellaneous*/
-	cursor: pointer;
-	grid-template-areas: select;
-	& > option {
-		background-color: var(--color-primary);
-		border-radius: 2px;
-	}
+	transition: var(--transition-normal);
 }
 
 .logo {
@@ -64,31 +46,42 @@
 	backdrop-filter: blur(10px);
 }
 
-@media (width > 700px) {
+@media (width > 1024px) {
 	.navbar {
+		/*Display stuff*/
 		display: grid;
-		justify-content: initial;
+		grid-template-areas: 'logo links languageSelector';
 		grid-template-columns: 1fr auto auto;
-		grid-template-areas: 'logo links select';
+		justify-content: initial;
+		/*Miscellaneous*/
 		gap: var(--space-md);
 	}
 
 	.logo {
+		/*Miscellaneous*/
 		place-self: start;
 	}
 
 	.linksContainer {
+		/*Display stuff*/
+		flex-direction: row;
+		grid-area: links;
+		/*Positioning stuff*/
+		position: initial;
+		left: 0;
+		/*Box model stuff*/
 		width: fit-content;
 		height: fit-content;
-		position: initial;
-		flex-direction: row;
-		left: 0;
-		opacity: 1 !important;
 		padding: 0;
-		grid-area: links;
+		background-color: transparent;
+		/*Manipulations stuff*/
+		opacity: 1 !important;
+		/*Miscellaneous*/
+		backdrop-filter: blur(0);
 	}
 
 	.icon {
+		/*Display stuff*/
 		display: none;
 	}
 }

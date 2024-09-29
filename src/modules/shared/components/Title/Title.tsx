@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+
 interface Props {
 	tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
 	text: string;
@@ -11,6 +13,7 @@ interface Props {
 		| 'plan-tenka';
 	fontFamily?: 'japanese';
 	className?: string;
+	style?: CSSProperties;
 }
 
 export default function Title({
@@ -20,6 +23,7 @@ export default function Title({
 	color,
 	fontFamily,
 	className,
+	style,
 }: Props) {
 	const sizeStyle = `var(--font-size-${size})`;
 	const colorStyle = `var(--color-${color})`;
@@ -35,6 +39,7 @@ export default function Title({
 				color: colorStyle,
 				fontFamily: fontFamilyStyle,
 				textTransform: 'uppercase',
+				...style,
 			}}
 		>
 			{text}

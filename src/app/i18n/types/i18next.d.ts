@@ -14,6 +14,9 @@ import whoWeAre from '../locales/es/home/whoWeAre.json';
 import whatWeOffer from '../locales/es/home/whatWeOffer.json';
 import contact from '../locales/es/home/contact.json';
 
+/* --------------------------------- service -------------------------------- */
+import banner from '../locales/es/service/banner.json';
+
 declare module 'i18next' {
 	interface CustomTypeOptions {
 		resources: {
@@ -30,6 +33,9 @@ declare module 'i18next' {
 			'home/whoWeAre': typeof whoWeAre;
 			'home/whatWeOffer': typeof whatWeOffer;
 			'home/contact': typeof contact;
+
+			/* --------------------------------- service -------------------------------- */
+			'service/banner': typeof banner;
 		};
 	}
 }

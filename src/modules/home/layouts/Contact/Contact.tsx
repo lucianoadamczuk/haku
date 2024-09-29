@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import styles from './Contact.module.css';
 
 interface Props {
+	id: string;
 	title: string;
 	// person
 	nameAndSurnameLabel: string;
@@ -30,6 +31,7 @@ interface FormData {
 }
 
 export default function Contact({
+	id,
 	title,
 	nameAndSurnameLabel,
 	nameAndSurnameError,
@@ -41,16 +43,18 @@ export default function Contact({
 	button,
 	messageTemplate,
 }: Props) {
+	// react hook forms
 	const {
 		register,
 		formState: { errors },
 		handleSubmit,
 	} = useForm<FormData>();
 
+	/* -------------------------------- onSubmit -------------------------------- */
 	function onSubmit(data: FormData) {
 		const phone = hakuInformation.phone;
 
-		// transpolate values
+		// interpolate values
 		const message = messageTemplate
 			.replace('{{nameAndSurname}}', data.nameAndSurname)
 			.replace('{{companyName}}', data.companyName)
@@ -69,8 +73,12 @@ export default function Contact({
 		window.open(whatsappURL, '_blank');
 	}
 
+	/* -------------------------------------------------------------------------- */
+	/*                                  component                                 */
+	/* -------------------------------------------------------------------------- */
+
 	return (
-		<section className={styles.contact}>
+		<section className={styles.contact} id={id}>
 			{/* ---------------------------------- title --------------------------------- */}
 			<Title
 				tag='h3'

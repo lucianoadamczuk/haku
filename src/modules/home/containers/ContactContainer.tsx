@@ -6,8 +6,12 @@ interface Props {
 }
 
 export default async function ContactContainer({ language }: Props) {
-	const { t } = await useTranslation(language, 'home/contact');
+	const { t } = await useTranslation(language, [
+		'global/routes',
+		'home/contact',
+	]);
 
+	const id = t('routes.contact.pathname', { ns: 'global/routes' });
 	const title = t('title', { ns: 'home/contact' });
 	const nameAndSurnameLabel = t('nameAndSurnameLabel', { ns: 'home/contact' });
 	const nameAndSurnameError = t('nameAndSurnameError', { ns: 'home/contact' });
@@ -27,6 +31,7 @@ export default async function ContactContainer({ language }: Props) {
 
 	return (
 		<Contact
+			id={id}
 			title={title}
 			nameAndSurnameLabel={nameAndSurnameLabel}
 			nameAndSurnameError={nameAndSurnameError}

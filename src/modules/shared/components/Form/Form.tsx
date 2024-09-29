@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEventHandler, ReactNode } from 'react';
+import { FormEventHandler, ReactNode } from 'react';
 import styles from './Form.module.css';
 interface Props {
 	children: ReactNode;

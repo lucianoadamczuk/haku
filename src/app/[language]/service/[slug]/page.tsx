@@ -1,6 +1,6 @@
 import { useTranslation } from '@/app/i18n/configuration/server';
 import {
-	Banner,
+	BannerContainer,
 	HeaderService,
 	ServiceItemsContainer,
 } from '@/modules/service';
@@ -33,7 +33,7 @@ export default async function PageService({ params }: Props) {
 		<>
 			<HeaderService service={service} />
 			<main>
-				<Banner />
+				<BannerContainer language={language} />
 				<ServiceItemsContainer service={service} />
 			</main>
 		</>

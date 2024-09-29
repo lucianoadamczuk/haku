@@ -1,5 +1,5 @@
 .serviceItemsContainer {
-	padding: var(--space-lg) var(--space-container);
+	padding: var(--space-xl) var(--space-container);
 	display: grid;
 	gap: var(--space-lg);
 }

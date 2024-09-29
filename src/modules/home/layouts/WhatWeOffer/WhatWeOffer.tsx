@@ -22,7 +22,7 @@ export default async function WhatWeOffer({
 			<Title tag='h3' size='xl' text={title} />
 
 			<div className={styles.cardsContainer}>
-				{services.map((s, index) => {
+				{services.map((s) => {
 					const key = `service_${s.slug}`;
 					const href = `${language}/service/${s.slug}`;
 					const japaneseTitle = s.japaneseTitle;

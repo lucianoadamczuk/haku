@@ -9,4 +9,6 @@
 	background-color: var(--color-primary);
 	/*Typography stuff*/
 	text-align: center;
+	/*Miscellaneous*/
+	overflow: hidden;
 }

@@ -1,11 +1,9 @@
-import { hakuInformation } from '@/modules/constants';
-import styles from './Footer.module.css';
-import Icon from '../../components/Icon/Icon';
 import Link from 'next/link';
+import Icon from '../../components/Icon/Icon';
 import { Icons } from '../../components/Icon/types/Icon';
-import Title from '../../components/Title/Title';
 import Text from '../../components/Text/Text';
-import { useTranslation } from '@/app/i18n/configuration/server';
+import Title from '../../components/Title/Title';
+import styles from './Footer.module.css';
 
 /* ---------------------------------- haku ---------------------------------- */
 const HakuBox = () => {

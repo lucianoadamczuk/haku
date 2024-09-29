@@ -11,5 +11,6 @@ export { default as Title } from './components/Title/Title';
 export { default as FooterContainer } from './containers/FooterContainer';
 export { default as NavbarContainer } from './containers/NavbarContainer';
 export { default as Footer } from './layouts/Footer/Footer';
+export { default as LanguageSelector } from './layouts/Navbar/LanguageSelector/LanguageSelector';
 export { default as Navbar } from './layouts/Navbar/Navbar';
 export { default as NotFound } from './layouts/NotFound/NotFound';

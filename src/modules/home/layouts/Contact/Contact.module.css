@@ -1,6 +1,6 @@
 .contact {
 	width: 100%;
-	padding: var(--space-lg) var(--space-container);
+	padding: var(--space-xl) var(--space-container);
 	display: grid;
 	gap: 0 var(--space-md);
 	text-align: center;

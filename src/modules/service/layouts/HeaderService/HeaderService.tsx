@@ -20,6 +20,7 @@ export default async function HeaderService({ service }: Props) {
 	return (
 		<header className={styles.headerService}>
 			<Image
+				priority
 				src={src}
 				alt={alt}
 				width={300}

@@ -8,6 +8,7 @@
 		var(--space-container);
 	/*Miscellaneous*/
 	gap: var(--space-sm);
+	place-content: center;
 }
 
 .image {
