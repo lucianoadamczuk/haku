@@ -5,6 +5,6 @@ export const hakuInformation = {
 		meta: '',
 		x: '',
 	},
-	phone: '111111',
+	phone: '+5491153376931',
 	email: '...@.....com',
 };

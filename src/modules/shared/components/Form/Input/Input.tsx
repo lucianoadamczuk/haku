@@ -3,17 +3,18 @@ import styles from './Input.module.css';
 
 interface Props {
 	label: string;
-	type: 'text' | 'email';
+	type: 'text' | 'email' | 'url';
+	register: any;
 	error: string;
 }
-export default function Input({ label, type, error }: Props) {
+export default function Input({ label, type, register, error }: Props) {
 	return (
 		<div className={styles.box}>
 			<label htmlFor={label} className={styles.label}>
 				{label}
 			</label>
-			<input type={type} name={label} className={styles.input} />
-			<Text tag='small' size='sm' color='light' text={error} />
+			<input type={type} {...register} className={styles.input} />
+			<Text tag='small' size='sm' color='secondary-light' text={error} />
 		</div>
 	);
 }

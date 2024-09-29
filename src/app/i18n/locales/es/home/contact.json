@@ -1,0 +1,12 @@
+{
+	"title": "¡Hablemos!",
+	"nameAndSurnameLabel": "Nombre y apellido",
+	"nameAndSurnameError": "Este campo es obligatorio",
+	"companyNameLabel": "Nombre de su compañía",
+	"companyNameError": "Este campo es obligatorio",
+	"commentLabel": "¿Qué quiere saber?",
+	"commentError": "Debe ingresar algo",
+	"socialMediaTitle": "Red social - (opcional)",
+	"button": "enviar",
+	"message": "*¡Hola gente de HAKU!*%0A%0A Mi nombre es *{{nameAndSurname}}*.%0A Trabajo en *{{companyName}}* {{socialMedia}}. %0A *Comentario:* %0A {{comment}}. %0A%0A%0A *¡Saludos!*`;"
+}

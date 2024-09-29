@@ -2,7 +2,12 @@ interface Props {
 	tag: 'p' | 'small' | 'span';
 	text: string;
 	size?: 'sm';
-	color?: 'primary-light' | 'light' | 'light-transparent' | 'secondary';
+	color?:
+		| 'primary-light'
+		| 'light'
+		| 'light-transparent'
+		| 'secondary'
+		| 'secondary-light';
 	className?: string;
 }
 
