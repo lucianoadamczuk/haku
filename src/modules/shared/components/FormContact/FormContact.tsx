@@ -82,7 +82,7 @@ export default function FormContact({ formValues, className }: Props) {
       {/* social media */}
       <Input
         type="url"
-        label={formValues.socialMediaTitle}
+        label={formValues.socialMediaLabel}
         register={register("socialMedia", {
           pattern: {
             value: /^(https?:\/\/)?([\w-]+(\.[\w-]+)+)([\/\w-]*)*\/?$/,

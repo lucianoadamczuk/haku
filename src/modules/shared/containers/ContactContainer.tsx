@@ -28,6 +28,7 @@ export default async function ContactContainer({ language }: Props) {
   const commentLabel = t("commentLabel", { ns: "global/contact" });
   const commentError = t("commentError", { ns: "global/contact" });
   const socialMediaTitle = t("socialMediaTitle", { ns: "global/contact" });
+  const socialMediaError = t("socialMediaError", { ns: "global/contact" });
   const button = t("button", { ns: "global/contact" });
   const messageTemplate = t("message", {
     ns: "global/contact",
@@ -45,7 +46,8 @@ export default async function ContactContainer({ language }: Props) {
     options: options,
     commentLabel: commentLabel,
     commentError: commentError,
-    socialMediaTitle: socialMediaTitle,
+    socialMediaLabel: socialMediaTitle,
+    socialMediaError: socialMediaError,
     button: button,
     messageTemplate: messageTemplate,
   };

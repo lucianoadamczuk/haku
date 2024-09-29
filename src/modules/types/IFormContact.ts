@@ -6,7 +6,7 @@ export interface IFormcontact {
   companyNameLabel: string;
   companyNameError: string;
   // social media
-  socialMediaTitle: string;
+  socialMediaLabel: string;
   socialMediaError: string;
   // reason
   reasonLabel: string;
