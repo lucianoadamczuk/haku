@@ -1,33 +1,44 @@
 {
-	"name": "haku",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"accept-language": "^3.0.20",
-		"i18next": "^23.15.1",
-		"i18next-browser-languagedetector": "^8.0.0",
-		"i18next-resources-to-backend": "^1.2.1",
-		"next": "14.2.13",
-		"next-i18next": "^15.3.1",
-		"react": "^18",
-		"react-cookie": "^7.2.0",
-		"react-dom": "^18",
-		"react-hook-form": "^7.53.0",
-		"react-i18next": "^15.0.2",
-		"swiper": "^11.1.14"
-	},
-	"devDependencies": {
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"eslint": "^8",
-		"eslint-config-next": "14.2.13",
-		"typescript": "^5"
-	}
+  "name": "haku",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "accept-language": "^3.0.20",
+    "i18next": "^23.15.1",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-resources-to-backend": "^1.2.1",
+    "lint-staged": "^15.2.10",
+    "next": "14.2.13",
+    "next-i18next": "^15.3.1",
+    "react": "^18",
+    "react-cookie": "^7.2.0",
+    "react-dom": "^18",
+    "react-hook-form": "^7.53.0",
+    "react-i18next": "^15.0.2",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.6",
+    "prettier": "3.3.3",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.(ts|tsx|css)": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
 }
