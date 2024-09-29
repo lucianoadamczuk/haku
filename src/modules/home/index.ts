@@ -1,9 +1,11 @@
 export { default as CardService } from "./components/CardService/CardService";
+export { default as FormContact } from "./components/FormContact/FormContact";
 export { default as SlideWhoWeAre } from "./components/SlideWhoWeAre/SlideWhoWeAre";
 export { default as ContactContainer } from "./containers/ContactContainer";
 export { default as HeaderHomeContainer } from "./containers/HeaderHomeContainer";
 export { default as WhatWeOfferContainer } from "./containers/WhatWeOfferContainer";
 export { default as WhoWeAreContainer } from "./containers/WhoWeAreContainer";
+export * from "./interfaces/IFormContact";
 export { default as Contact } from "./layouts/Contact/Contact";
 export { default as HeaderHome } from "./layouts/HeaderHome/HeaderHome";
 export { default as WhatWeOffer } from "./layouts/WhatWeOffer/WhatWeOffer";

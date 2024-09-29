@@ -1,30 +1,33 @@
 .box {
-	/*Display stuff*/
-	display: flex;
-	flex-direction: column;
-	/*Box model stuff*/
-	width: 100%;
+  /*Display stuff*/
+  display: flex;
+  flex-direction: column;
+  /*Box model stuff*/
+  width: 100%;
 }
 
 .label {
-	color: var(--color-light);
+  /*Typography stuff*/
+  color: var(--color-light);
 }
 
 .textarea {
-	height: 100px;
-	/*Box model stuff*/
-	padding: var(--space-xs) var(--space-sm);
-	border: 0px;
-	border-radius: var(--rounded-md);
-	outline: none;
-	background-color: var(--color-light-transparent);
-	/*Manipulations stuff*/
-	opacity: 0.5;
-	/*Miscellaneous*/
-	resize: none;
+  /*Box model stuff*/
+  height: 100px;
+  padding: var(--space-xs) var(--space-sm);
+  border: 0px;
+  border-radius: var(--rounded-md);
+  outline: none;
+  background-color: var(--color-light-transparent);
+  /*Typography stuff*/
+  font-family: var(--font-family-base);
+  /*Manipulations stuff*/
+  opacity: 0.5;
+  /*Miscellaneous*/
+  resize: none;
 }
 
 .textarea:focus {
-	/*Manipulations stuff*/
-	opacity: 1;
+  /*Manipulations stuff*/
+  opacity: 1;
 }
