@@ -10,6 +10,7 @@ export default async function HeaderHome({ id, subtitle }: Props) {
   return (
     <header className={styles.headerHome} id={id}>
       <Image
+        priority
         src="../icon.svg"
         alt="icon"
         width={300}

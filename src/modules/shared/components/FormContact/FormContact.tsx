@@ -56,7 +56,7 @@ export default function FormContact({ formValues, className }: Props) {
     // send
     window.open(whatsappURL, "_blank");
   }
-  console.log(formValues);
+
   return (
     <Form className={className} onSubmit={handleSubmit(onSubmit)}>
       {/* person */}

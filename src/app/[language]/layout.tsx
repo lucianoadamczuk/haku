@@ -8,6 +8,7 @@ import { dir } from "i18next";
 import { ReactNode } from "react";
 import "../../modules/theme/index.css";
 import { languages } from "../i18n/configuration/settings";
+import { notFound } from "next/navigation";
 
 /* ------------------------------ static params ----------------------------- */
 export async function generateStaticParams() {
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: { params: AppParams }) {
     return { title, description };
   } catch (error) {
     console.log(error);
+    return notFound();
   }
 }
 
