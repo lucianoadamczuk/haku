@@ -1,13 +1,14 @@
 "use client";
 import { hakuInformation } from "@/modules/constants";
-import { Button, Form, Input, Textarea } from "@/modules/shared";
+import { Button, Form, Input, Select, Textarea } from "@/modules/shared";
+import { IFormcontact } from "@/modules/types";
 import { useForm } from "react-hook-form";
-import { IFormcontact } from "../../interfaces/IFormContact";
 
 //form data
 export interface IFormData {
   nameAndSurname: string;
   companyName: string;
+  reason: string;
   comment: string;
   socialMedia: string;
 }
@@ -40,6 +41,7 @@ export default function FormContact({ formValues, className }: Props) {
     const message = formValues.messageTemplate
       .replace("{{nameAndSurname}}", data.nameAndSurname)
       .replace("{{companyName}}", data.companyName)
+      .replace("{{reason}}", data.reason)
       .replace("{{comment}}", data.comment)
       .replace("{{socialMedia}}", data.socialMedia);
 
@@ -77,19 +79,31 @@ export default function FormContact({ formValues, className }: Props) {
         error={errors.companyName?.message || ""}
       />
 
+      {/* social media */}
+      <Input
+        type="url"
+        label={formValues.socialMediaTitle}
+        register={register("socialMedia", {
+          pattern: {
+            value: /^(https?:\/\/)?([\w-]+(\.[\w-]+)+)([\/\w-]*)*\/?$/,
+            message: formValues.socialMediaError,
+          },
+        })}
+        error={errors.socialMedia?.message || ""}
+      />
+
+      {/* reason */}
+      <Select
+        label={formValues.reasonLabel}
+        options={formValues.options}
+        register={register("reason")}
+      />
+
       {/* comment */}
       <Textarea
         label={formValues.commentLabel}
         register={register("comment", { required: formValues.commentError })}
         error={errors.comment?.message || ""}
-      />
-
-      {/* social media */}
-      <Input
-        type="url"
-        label={formValues.socialMediaTitle}
-        register={register("socialMedia")}
-        error=""
       />
 
       {/* button */}

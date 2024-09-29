@@ -1,0 +1,16 @@
+{
+  "title": "¡Hablemos!",
+  "nameAndSurnameLabel": "Nombre y apellido",
+  "nameAndSurnameError": "Este campo es obligatorio",
+  "companyNameLabel": "Nombre de su compañía",
+  "companyNameError": "Este campo es obligatorio",
+  "socialMediaTitle": "Red social - (opcional)",
+  "socialMediaError": "Debes ingresar una URL",
+  "reasonLabel": "Motivo de la consulta",
+  "options": ["Otro", "Plan Sakura", "Plan Fuji", "Plan Bushido", "Plan Tenka"],
+  "commentLabel": "Comentario",
+  "commentError": "Debe ingresar algo",
+
+  "button": "enviar",
+  "message": "*¡Hola gente de HAKU!*%0A%0AMi nombre es *{{nameAndSurname}}*.%0ATrabajo en *{{companyName}}* %0A{{socialMedia}}. %0A*Motivo de la consulta:* {{reason}}. %0A*Comentario:* %0A{{comment}}. %0A%0A%0A *¡Saludos!*`;"
+}

@@ -8,23 +8,29 @@ interface Props {
 export default async function ContactContainer({ language }: Props) {
   const { t } = await useTranslation(language, [
     "global/routes",
-    "home/contact",
+    "global/contact",
   ]);
 
   const id = t("routes.contact.pathname", { ns: "global/routes" });
-  const title = t("title", { ns: "home/contact" });
+  const title = t("title", { ns: "global/contact" });
 
   // form stuff
-  const nameAndSurnameLabel = t("nameAndSurnameLabel", { ns: "home/contact" });
-  const nameAndSurnameError = t("nameAndSurnameError", { ns: "home/contact" });
-  const companyNameLabel = t("companyNameLabel", { ns: "home/contact" });
-  const companyNameError = t("companyNameError", { ns: "home/contact" });
-  const commentLabel = t("commentLabel", { ns: "home/contact" });
-  const commentError = t("commentError", { ns: "home/contact" });
-  const socialMediaTitle = t("socialMediaTitle", { ns: "home/contact" });
-  const button = t("button", { ns: "home/contact" });
+  const nameAndSurnameLabel = t("nameAndSurnameLabel", {
+    ns: "global/contact",
+  });
+  const nameAndSurnameError = t("nameAndSurnameError", {
+    ns: "global/contact",
+  });
+  const companyNameLabel = t("companyNameLabel", { ns: "global/contact" });
+  const companyNameError = t("companyNameError", { ns: "global/contact" });
+  const selectLabel = t("reasonLabel", { ns: "global/contact" });
+  const options = t("options", { ns: "global/contact", returnObjects: true });
+  const commentLabel = t("commentLabel", { ns: "global/contact" });
+  const commentError = t("commentError", { ns: "global/contact" });
+  const socialMediaTitle = t("socialMediaTitle", { ns: "global/contact" });
+  const button = t("button", { ns: "global/contact" });
   const messageTemplate = t("message", {
-    ns: "home/contact",
+    ns: "global/contact",
     nameAndSurname: "{{nameAndSurname}}",
     companyName: "{{companyName}}",
     comment: "{{comment}}",
@@ -35,6 +41,8 @@ export default async function ContactContainer({ language }: Props) {
     nameAndSurnameError: nameAndSurnameError,
     companyNameLabel: companyNameLabel,
     companyNameError: companyNameError,
+    reasonLabel: selectLabel,
+    options: options,
     commentLabel: commentLabel,
     commentError: commentError,
     socialMediaTitle: socialMediaTitle,

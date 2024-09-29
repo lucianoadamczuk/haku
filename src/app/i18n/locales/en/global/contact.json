@@ -1,0 +1,22 @@
+{
+  "title": "Let's Talk!",
+  "nameAndSurnameLabel": "Name and Surname",
+  "nameAndSurnameError": "This field is required",
+  "companyNameLabel": "Company Name",
+  "companyNameError": "This field is required",
+  "socialMediaTitle": "Social Media - (optional)",
+  "socialMediaError": "You must enter a URL",
+  "reasonLabel": "consultation reason",
+  "options": [
+    "Other",
+    "Sakura Plan",
+    "Fuji Plan",
+    "Bushido Plan",
+    "Tenka Plan"
+  ],
+  "commentLabel": "Write yout comment",
+  "commentError": "You must enter something",
+
+  "button": "submit",
+  "message": "*Hello HAKU team!*%0A%0A My name is *{{nameAndSurname}}*.%0AI work at *{{companyName}}* %0A{{socialMedia}}. %0A*Reason for the consultation:* {{reason}}. %0A*Comment:* %0A{{comment}}. %0A%0A%0A*Best regards!*"
+}

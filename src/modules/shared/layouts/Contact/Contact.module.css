@@ -1,0 +1,50 @@
+.contact {
+  width: 100%;
+  padding: var(--space-xl) var(--space-container);
+  display: grid;
+  gap: 0 var(--space-md);
+  text-align: center;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  grid-template-areas:
+    "icon"
+    "title"
+    "form";
+}
+
+.title {
+  grid-area: title;
+}
+
+.form {
+  grid-area: form;
+}
+
+.icon {
+  max-width: 150px !important;
+  max-height: 150px !important;
+  place-self: center;
+  grid-area: icon;
+}
+
+@media (width > 700px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "icon form"
+      "title form";
+    place-items: center;
+  }
+
+  .title {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .icon {
+    max-width: 250px !important;
+    height: 250px !important;
+    align-self: end;
+    justify-self: center;
+  }
+}

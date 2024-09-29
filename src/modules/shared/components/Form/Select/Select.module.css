@@ -11,24 +11,27 @@
   color: var(--color-light);
 }
 
-.textarea {
+.select {
   /*Box model stuff*/
-  height: 100px;
   padding: var(--space-xs) var(--space-sm);
   border: 0px;
   border-radius: var(--rounded-md);
   outline: none;
   background-color: var(--color-light-transparent);
-  /*Typography stuff*/
-  font-family: var(--font-family-base);
   /*Manipulations stuff*/
-  transition: var(--transition-fast);
   opacity: 0.5;
-  /*Miscellaneous*/
-  resize: none;
+  transition: var(--transition-normal);
 }
 
-.textarea:focus {
+.select:focus {
   /*Manipulations stuff*/
   opacity: 1;
+  border-radius: var(--rounded-md) var(--rounded-md) 0 0;
+}
+
+.option {
+  background-color: var(--color-primary);
+  outline: none;
+  color: var(--color-light);
+  font-family: var(--font-family-base);
 }

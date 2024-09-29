@@ -1,28 +1,29 @@
 .box {
-	/*Display stuff*/
-	display: flex;
-	flex-direction: column;
-	/*Box model stuff*/
-	width: 100%;
+  /*Display stuff*/
+  display: flex;
+  flex-direction: column;
+  /*Box model stuff*/
+  width: 100%;
 }
 
 .label {
-	/*Typography stuff*/
-	color: var(--color-light);
+  /*Typography stuff*/
+  color: var(--color-light);
 }
 
 .input {
-	/*Box model stuff*/
-	padding: var(--space-xs) var(--space-sm);
-	border: 0px;
-	border-radius: var(--rounded-md);
-	outline: none;
-	background-color: var(--color-light-transparent);
-	/*Manipulations stuff*/
-	opacity: 0.5;
+  /*Box model stuff*/
+  padding: var(--space-xs) var(--space-sm);
+  border: 0px;
+  border-radius: var(--rounded-md);
+  outline: none;
+  background-color: var(--color-light-transparent);
+  /*Manipulations stuff*/
+  transition: var(--transition-fast);
+  opacity: 0.5;
 }
 
 .input:focus {
-	/*Manipulations stuff*/
-	opacity: 1;
+  /*Manipulations stuff*/
+  opacity: 1;
 }

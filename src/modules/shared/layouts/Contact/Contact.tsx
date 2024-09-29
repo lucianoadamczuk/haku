@@ -1,7 +1,8 @@
 import { Icon, Title } from "@/modules/shared";
 import FormContact from "../../components/FormContact/FormContact";
-import { IFormcontact } from "../../interfaces/IFormContact";
+
 import styles from "./Contact.module.css";
+import { IFormcontact } from "@/modules/types";
 
 interface Props {
   id: string;

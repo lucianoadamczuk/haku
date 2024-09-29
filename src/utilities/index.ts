@@ -1,2 +1,2 @@
-export * from './sanitizeString';
-export { default as useDevice } from './useDevice';
+export * from "./sanitizeString";
+export * from "./useDevice";

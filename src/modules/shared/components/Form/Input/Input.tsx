@@ -6,7 +6,6 @@ interface Props {
   label: string;
   type: "text" | "email" | "url";
   register: UseFormRegisterReturn;
-
   error: string;
 }
 export default function Input({ label, type, register, error }: Props) {
