@@ -1,7 +1,24 @@
 import { Button, Form, Icon, Input, Textarea, Title } from '@/modules/shared';
 import styles from './Contact.module.css';
-interface Props {}
-export default function Contact({}: Props) {
+interface Props {
+	title: string;
+
+	nameAndSurnameLabel: string;
+	nameAndSurnameError: string;
+
+	companyNameLabel: string;
+	companyNameError: string;
+
+	textareaLabel: string;
+	textareaError: string;
+}
+export default function Contact({
+	title,
+	nameAndSurnameLabel,
+	nameAndSurnameError,
+	companyNameLabel,
+	companyNameError,
+}: Props) {
 	return (
 		<section className={styles.contact}>
 			<Title
