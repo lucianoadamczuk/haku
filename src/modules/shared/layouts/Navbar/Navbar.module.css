@@ -1,87 +1,87 @@
 .navbar {
-	/*Display stuff*/
-	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-areas: 'languageSelector logo icon';
-	align-items: center;
-	/*Positioning stuff*/
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 10;
-	/*Box model stuff*/
-	width: 100%;
-	padding: var(--space-sm) var(--space-container);
-	transition: var(--transition-normal);
+  /*Display stuff*/
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  grid-template-areas: "languageSelector logo icon";
+  align-items: center;
+  /*Positioning stuff*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  /*Box model stuff*/
+  width: 100%;
+  padding: var(--space-sm) var(--space-container);
+  transition: var(--transition-normal);
 }
 
 .logo {
-	grid-area: logo;
-	place-self: center;
+  grid-area: logo;
+  place-self: center;
 }
 
 .icon {
-	grid-area: icon;
-	place-self: end;
+  grid-area: icon;
+  place-self: end;
 }
 
 .linksContainer {
-	/*Display stuff*/
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	/*Positioning stuff*/
-	position: absolute;
-	top: 60px;
-	/*Box model stuff*/
-	width: 100%;
-	height: calc(100vh - 60px);
-	padding: var(--space-lg) var(--space-container);
-	background-color: var(--color-primary-transparent);
-	/*Typography stuff*/
-	text-align: center;
-	transition: all var(--transition-normal) allow-discrete;
-	gap: var(--space-md);
-	backdrop-filter: blur(10px);
+  /*Display stuff*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*Positioning stuff*/
+  position: absolute;
+  top: 60px;
+  /*Box model stuff*/
+  width: 100%;
+  height: calc(100vh - 60px);
+  padding: var(--space-lg) var(--space-container);
+  background-color: var(--color-primary-transparent);
+  /*Typography stuff*/
+  text-align: center;
+  transition: all var(--transition-normal) allow-discrete;
+  gap: var(--space-md);
+  backdrop-filter: blur(10px);
 }
 
 @media (width > 1024px) {
-	.navbar {
-		/*Display stuff*/
-		display: grid;
-		grid-template-areas: 'logo links languageSelector';
-		grid-template-columns: 1fr auto auto;
-		justify-content: initial;
-		/*Miscellaneous*/
-		gap: var(--space-md);
-	}
+  .navbar {
+    /*Display stuff*/
+    display: grid;
+    grid-template-areas: "logo links languageSelector";
+    grid-template-columns: 1fr auto auto;
+    justify-content: initial;
+    /*Miscellaneous*/
+    gap: var(--space-md);
+  }
 
-	.logo {
-		/*Miscellaneous*/
-		place-self: start;
-	}
+  .logo {
+    /*Miscellaneous*/
+    place-self: start;
+  }
 
-	.linksContainer {
-		/*Display stuff*/
-		flex-direction: row;
-		grid-area: links;
-		/*Positioning stuff*/
-		position: initial;
-		left: 0;
-		/*Box model stuff*/
-		width: fit-content;
-		height: fit-content;
-		padding: 0;
-		background-color: transparent;
-		/*Manipulations stuff*/
-		opacity: 1 !important;
-		/*Miscellaneous*/
-		backdrop-filter: blur(0);
-	}
+  .linksContainer {
+    /*Display stuff*/
+    flex-direction: row;
+    grid-area: links;
+    /*Positioning stuff*/
+    position: initial;
+    left: 0;
+    /*Box model stuff*/
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    background-color: transparent;
+    /*Manipulations stuff*/
+    opacity: 1 !important;
+    /*Miscellaneous*/
+    backdrop-filter: blur(0);
+  }
 
-	.icon {
-		/*Display stuff*/
-		display: none;
-	}
+  .icon {
+    /*Display stuff*/
+    display: none;
+  }
 }

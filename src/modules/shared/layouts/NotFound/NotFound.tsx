@@ -1,23 +1,20 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
+import { useTranslation } from "@/app/i18n/configuration/client";
+import { AppParams } from "@/modules/types";
+import { useRouter } from "next/navigation";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import Title from "../../components/Title/Title";
 import styles from "./NotFound.module.css";
-import { useTranslation } from "@/app/i18n/configuration/client";
-import { AppParams } from "@/modules/types";
-import { fallbackLng, languages } from "@/app/i18n/configuration/settings";
 
-export default function NotFound() {
+interface Props {
+  language: AppParams["language"];
+}
+export default function NotFound({ language }: Props) {
   const router = useRouter();
-  const params: AppParams = useParams();
 
-  const { t } = useTranslation(params.language, "global/errors");
-
-  const language = languages.includes(params.language)
-    ? params.language
-    : fallbackLng;
+  const { t } = useTranslation(language, "global/errors");
 
   const title = t("notFound.title", { ns: "global/errors" });
   const text = t("notFound.text", { ns: "global/errors" });
@@ -30,7 +27,7 @@ export default function NotFound() {
         <Text tag="p" text={text} />
       </div>
 
-      <Button text={button} onClick={() => router.push(`/${language}`)} />
+      <Button text={button} onClick={() => router.replace(`/${language}`)} />
     </section>
   );
 }

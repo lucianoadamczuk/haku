@@ -1,7 +1,8 @@
 {
-	"footer": {
-		"contact": "Contact",
-		"socialMedias": "Social medias",
-		"copyright": "HAKU © | All rights reserved"
-	}
+  "footer": {
+    "phrase": "Your strategic partner",
+    "contact": "Contact",
+    "socialMedias": "Social medias",
+    "copyright": "HAKU © | All rights reserved"
+  }
 }

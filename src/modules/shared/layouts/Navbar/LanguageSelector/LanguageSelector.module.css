@@ -1,18 +1,17 @@
 .select {
-	width: fit-content;
-	/*Box model stuff*/
-	border: 0px;
-	border-radius: var(--rounded-md);
-	outline: none;
-	background-color: var(--color-primary);
-	/*Typography stuff*/
-	color: var(--color-light);
-	/*Miscellaneous*/
-	cursor: pointer;
-	grid-template-areas: select;
+  width: fit-content;
+  /*Box model stuff*/
+  border: 0px;
+  border-radius: var(--rounded-md);
+  outline: none;
+  background-color: var(--color-primary);
+  /*Typography stuff*/
+  color: var(--color-light);
+  /*Miscellaneous*/
+  cursor: pointer;
+}
 
-	& > option {
-		background-color: var(--color-primary);
-		border-radius: 2px;
-	}
+.option {
+  background-color: var(--color-primary);
+  border-radius: 2px;
 }

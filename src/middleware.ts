@@ -28,14 +28,13 @@ export function middleware(req: NextRequest) {
 
   // Redirect if lng in path is not supported
   if (
-    !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
+    !languages.some((loc) =>
+      new RegExp(`^/${loc}(/|$)`).test(req.nextUrl.pathname),
+    ) &&
     !req.nextUrl.pathname.startsWith("/_next")
   ) {
-    return NextResponse.redirect(
-      new URL(`/${lng}${req.nextUrl.pathname}${req.nextUrl.search}`, req.url),
-    );
+    return NextResponse.redirect(new URL(`/${lng}`, req.url));
   }
-
   if (req.headers.has("referer")) {
     const refererUrl = new URL(req.headers.get("referer") || "");
     const lngInReferer = languages.find((l) =>
